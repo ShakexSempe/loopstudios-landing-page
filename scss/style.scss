@@ -20,7 +20,11 @@ body {
                         ". main ."
                         "footer footer footer";
     @media (max-width: 500px){
-
+        grid-template-rows: 100vh auto auto;
+        grid-template-columns: 100%;
+        grid-template-areas: "header"
+                                "main"
+                                "footer";
     }
 // header
     #header {
@@ -33,7 +37,13 @@ body {
             background-image: url(../images/mobile/image-hero.jpg);
             
         }
+        .hamburger {
 
+            z-index: 4;
+            @media (min-width: 768px){
+            display: none;
+            }
+        }
         .navbar {
             background: rgba(255, 0, 0, 0.425);
             display: flex;
@@ -43,12 +53,43 @@ body {
             position: fixed;
             top: 0;
             width: 100vw;
+            z-index: 2;
+            .logo {
+                z-index: 3;
+            }
+            .mobile-nav-list {
+                @media (min-width: 768px){
+                    display: none
+                }
+                position: fixed;
+                min-height: 100vh;
+                min-width: 100vw;
+                background-color: #000;
+                top: 0;
+                left: 100%;
+
+                ul {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    padding: 2em;
+                }
+                li {
+                    color: $gray;
+                    list-style: none;
+                    font-size: 2em;
+                    text-transform: uppercase;
+                    padding: .5em 0;
+                }
+            }
 
             .nav-list {
+                // hide desktop navlist on mobile screens
                 @media (max-width: 600px){
-                    flex-direction: column;
-                    position: relative;
+                    display: none;
                 }
+                // hide desktop navlist on mobile screens
+                
                 border: 1px solid #fff;
                 display: flex;
                 justify-content: space-evenly;
@@ -99,7 +140,66 @@ body {
 // main
     #main {
         grid-area: main;
-        background-color: red;
+        // background-color: $white;
+        .about {
+            background-color: red;
+            height: 100vh;
+            position: relative;
+            @media (max-width: 768px){
+                display: flex;
+                flex-direction: column;
+                &.about .mobile-img {
+                    position: relative;
+                }
+                &.about article {
+                    position: relative;
+                    width: 100%;
+                    text-align: center;
+                    padding: 1.5em;
+                    h1 {
+                        font-size: 2em;
+                    }
+                }
+            }
+
+            .desktop-img {
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+            }
+            article {
+                position: absolute;
+                right: 0;
+                border: 1px solid blue;
+                width: 50%;
+                height: 50%;
+                bottom: 0;
+                background-color: $white;
+                padding: 4em 0 0 4em;
+
+                h1 {
+                    font-family: $font-sans;
+                    text-transform: uppercase;
+                    font-size: 3em;
+                    letter-spacing: .1em;
+                }
+                p {
+                    font-family: $font-serif;
+                    color: $gray;
+                }
+            }
+
+        }
+
+        // VR image media query
+        @media (min-width: 1024px){
+            .mobile-img {display: none;}
+        }
+        @media (max-width: 1024px){
+            .desktop-img {display: none;}
+            
+        }
+        // end of VR image media query
 
         .main-bottom {
             // gallery media query
@@ -110,6 +210,7 @@ body {
                 .desktop-gallery {display: none;}
             }
             // gallery media query
+            
         }
     }
 // end of main
@@ -120,6 +221,17 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        // mobile
+        @media (max-width: 768px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            &#footer .brand-links {
+                border: 1px solid red;
+            }
+        }
+        // end of mobile
     }
 // end of footer
 
