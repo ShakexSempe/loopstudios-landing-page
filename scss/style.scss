@@ -142,8 +142,10 @@ body {
         grid-area: main;
         // background-color: $white;
         .about {
+            // background-color: $white;
             background-color: red;
-            height: 100vh;
+            margin: 10vh 0;
+            height: 80vh;
             position: relative;
             @media (max-width: 768px){
                 display: flex;
@@ -202,15 +204,105 @@ body {
         // end of VR image media query
 
         .main-bottom {
-            // gallery media query
+            position: relative;
+            // desktop media query
             @media (min-width: 1024px){
                 .mobile-gallery {display: none;}
+                button {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+                .main-header {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    font-size: 1.5em;
+                    
+                }
+                .desktop-gallery {
+                    border: 2px solid green;
+                    margin: 10vh 0;
+                    display: grid;
+                    gap: 1em;
+                    grid-template-columns: 1fr 1fr 1fr 1fr;
+                    
+                    figure {
+                        img {
+                            width: 100%;
+                        }
+                        figcaption {
+                            font-size: 2em;
+                            bottom: 1em;
+                            left: 1em;
+                        }
+                    }
+                }
             }
+            // end of desktop media query
+            // mobile media query
             @media (max-width: 1024px){
+                border: 1px solid pink;
+                margin: 20vh 0;
                 .desktop-gallery {display: none;}
+                button {
+                    display: block;
+                    margin: 2em auto;
+                }
+                .main-header {
+                    position: relative;
+                    font-size: 1em;
+                    text-align: center;
+                    margin: 2em 0;
+                }
+                .mobile-gallery {
+                    display: grid;
+                    gap: 2em;
+                    figure {
+                        img {
+                            width: 100%;
+                        }
+                        figcaption {
+                            font-size: 2em;
+                            bottom: 0;
+                        }
+                    }
+                }
             }
-            // gallery media query
-            
+            // end of mobile media query
+            border: 1px solid red;
+            button {
+                font-family: $font-serif;
+                font-weight: 600;
+                padding: .5em 3em;
+                text-transform: uppercase;
+                letter-spacing: .2em;
+                background-color: $white;
+                transition: .2s ease;
+
+                &:hover {
+                    background-color: $black;
+                    color: $white;
+                }
+            }
+            .main-header {
+                h1 {
+                    font-size: 2em;
+                    text-transform: uppercase;
+                    font-family: $font-sans;
+                    font-weight: 600;
+                }
+            }
+            figure {
+                position: relative;
+                figcaption {
+                    font-family: $font-sans;
+                    position: absolute;
+                    color: $white;
+                    text-transform: uppercase;
+                    width: 40%;
+                }
+            }
         }
     }
 // end of main
