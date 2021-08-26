@@ -49,7 +49,7 @@ body {
             display: flex;
             justify-content: space-between;
             padding: 2em 10vw;
-            height: auto;
+            height: 10vh;
             position: fixed;
             top: 0;
             width: 100vw;
@@ -143,13 +143,16 @@ body {
         // background-color: $white;
         .about {
             // background-color: $white;
-            background-color: red;
-            margin: 10vh 0;
-            height: 80vh;
+            // background-color: red;
+            margin: 0vh 0 15vh;
+            height: 90vh;
             position: relative;
             @media (max-width: 768px){
                 display: flex;
                 flex-direction: column;
+                justify-content: space-evenly;
+                margin: 10vh 0 0vh;
+                // border: 1px solid red;
                 &.about .mobile-img {
                     position: relative;
                 }
@@ -161,23 +164,28 @@ body {
                     h1 {
                         font-size: 2em;
                     }
+                    p {
+                        padding: 0 1.5em;
+                    }
                 }
             }
 
             .desktop-img {
-                width: 100%;
+                width: 60%;
                 position: absolute;
                 bottom: 0;
+
             }
             article {
                 position: absolute;
                 right: 0;
-                border: 1px solid blue;
+                // border: 1px solid blue;
                 width: 50%;
                 height: 50%;
                 bottom: 0;
                 background-color: $white;
                 padding: 4em 0 0 4em;
+
 
                 h1 {
                     font-family: $font-sans;
@@ -190,7 +198,16 @@ body {
                     color: $gray;
                 }
             }
+            @media (min-width: 1024px){
+                .about-container {
+                    position: absolute;
+                    bottom: 0;
 
+                    p {
+                        padding-right: 4.5em;
+                    }
+                }
+            }
         }
 
         // VR image media query
@@ -199,12 +216,17 @@ body {
         }
         @media (max-width: 1024px){
             .desktop-img {display: none;}
-            
+            .mobile-img {
+                img {
+                    width: 100%;
+                }
+            }
         }
         // end of VR image media query
 
         .main-bottom {
             position: relative;
+            padding: 5vh 0;
             // desktop media query
             @media (min-width: 1024px){
                 .mobile-gallery {display: none;}
@@ -222,7 +244,7 @@ body {
                 }
                 .desktop-gallery {
                     border: 2px solid green;
-                    margin: 10vh 0;
+                    margin: 15vh 0;
                     display: grid;
                     gap: 1em;
                     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -241,9 +263,10 @@ body {
             }
             // end of desktop media query
             // mobile media query
-            @media (max-width: 1024px){
-                border: 1px solid pink;
-                margin: 20vh 0;
+            @media (max-width: 768px){
+                // border: 1px solid pink;
+                margin: 0 0 15vh;
+                padding: 0;
                 .desktop-gallery {display: none;}
                 button {
                     display: block;
@@ -253,7 +276,7 @@ body {
                     position: relative;
                     font-size: 1em;
                     text-align: center;
-                    margin: 2em 0;
+                    margin: 5vh 0;
                 }
                 .mobile-gallery {
                     display: grid;
@@ -270,11 +293,11 @@ body {
                 }
             }
             // end of mobile media query
-            border: 1px solid red;
             button {
                 font-family: $font-serif;
                 font-weight: 600;
                 padding: .5em 3em;
+                border-radius: 4px;
                 text-transform: uppercase;
                 letter-spacing: .2em;
                 background-color: $white;
