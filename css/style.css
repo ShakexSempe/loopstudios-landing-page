@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -9,13 +10,68 @@ body {
 
 .container {
   width: 100%;
+  overflow: hidden;
   display: grid;
   grid-template-rows: 100vh auto 20vh;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: 10vw 80vw 10vw;
   grid-template-areas: "header header header" ". main ." "footer footer footer"; }
   .container #header {
     grid-area: header;
-    background-color: blue; }
+    background-image: url(../images/desktop/image-hero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+    @media (max-width: 768px) {
+      .container #header {
+        background-image: url(../images/mobile/image-hero.jpg); } }
+    .container #header .navbar {
+      background: rgba(255, 0, 0, 0.425);
+      display: flex;
+      justify-content: space-between;
+      padding: 2em 10vw;
+      height: auto;
+      position: fixed;
+      top: 0;
+      width: 100vw; }
+      .container #header .navbar .nav-list {
+        border: 1px solid #fff;
+        display: flex;
+        justify-content: space-evenly; }
+        @media (max-width: 600px) {
+          .container #header .navbar .nav-list {
+            flex-direction: column;
+            position: relative; } }
+        .container #header .navbar .nav-list li {
+          margin: 0 .5em;
+          list-style: none;
+          color: white; }
+    .container #header .hero {
+      border: 3px solid white;
+      width: 45%;
+      padding: 2.5em; }
+      @media (min-width: 1024px) {
+        .container #header .hero {
+          position: relative;
+          top: 35%;
+          left: 10vw; } }
+      @media (max-width: 768px) {
+        .container #header .hero {
+          display: grid;
+          place-items: center;
+          width: auto;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+          margin: 1.5em;
+          padding: 2em; }
+          .container #header .hero.hero h1 {
+            font-size: 2em; } }
+      .container #header .hero h1 {
+        font-family: "Josefin Sans", sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 3.5em;
+        letter-spacing: .2em; }
   .container #main {
     grid-area: main;
     background-color: red; }
