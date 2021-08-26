@@ -332,18 +332,50 @@ body {
 // footer
     #footer {
         grid-area: footer;
-        background-color: green;
+        background-color: $black;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 5vh 0;
+        font-family: $font-sans;
+        text-transform: capitalize;
 
         // mobile
         @media (max-width: 768px) {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            color: $gray;
+            .footer-logo {
+                margin-bottom: 1em;
+            }
             &#footer .brand-links {
                 border: 1px solid red;
+                text-align: center;
+                color: $white;
+
+                li {
+                    margin-bottom: 1em;
+                    list-style: none;
+                }
+            }
+            .social-links {
+                border: 1px solid yellow;
+
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    li {
+                        margin: .5em;
+                        list-style: none;
+                    }
+                }
+
+                p {
+                    text-align: center;
+                }
             }
         }
         // end of mobile
