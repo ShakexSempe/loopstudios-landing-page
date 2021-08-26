@@ -3,3 +3,31 @@
   margin: 0;
   box-sizing: border-box;
   font-size: 15px; }
+
+body {
+  line-height: 1.6; }
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 100vh auto 20vh;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas: "header header header" ". main ." "footer footer footer"; }
+  .container #header {
+    grid-area: header;
+    background-color: blue; }
+  .container #main {
+    grid-area: main;
+    background-color: red; }
+    @media (min-width: 1024px) {
+      .container #main .main-bottom .mobile-gallery {
+        display: none; } }
+    @media (max-width: 1024px) {
+      .container #main .main-bottom .desktop-gallery {
+        display: none; } }
+  .container #footer {
+    grid-area: footer;
+    background-color: green;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }

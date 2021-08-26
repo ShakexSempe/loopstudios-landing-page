@@ -4,3 +4,50 @@
     box-sizing: border-box;
     font-size: 15px;
 }
+
+body {
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100vh auto 20vh;
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-areas: "header header header"
+                        ". main ."
+                        "footer footer footer";
+// header
+    #header {
+        grid-area: header;
+        background-color: blue;
+    }
+// end of header
+// main
+    #main {
+        grid-area: main;
+        background-color: red;
+
+        .main-bottom {
+            // gallery media query
+            @media (min-width: 1024px){
+                .mobile-gallery {display: none;}
+            }
+            @media (max-width: 1024px){
+                .desktop-gallery {display: none;}
+            }
+            // gallery media query
+        }
+    }
+// end of main
+// footer
+    #footer {
+        grid-area: footer;
+        background-color: green;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+// end of footer
+
+}
