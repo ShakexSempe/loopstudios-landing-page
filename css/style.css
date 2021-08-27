@@ -209,7 +209,6 @@ body {
           left: 0;
           font-size: 1.5em; }
         .container #main .main-bottom .desktop-gallery {
-          border: 2px solid green;
           margin: 15vh 0;
           display: grid;
           gap: 1em;
@@ -222,13 +221,14 @@ body {
             left: 1em; } }
       @media (max-width: 768px) {
         .container #main .main-bottom {
-          margin: 0 0 15vh;
+          margin: 0 0 10vh;
           padding: 0; }
           .container #main .main-bottom .desktop-gallery {
             display: none; }
           .container #main .main-bottom button {
             display: block;
-            margin: 2em auto; }
+            margin: 2em auto;
+            position: relative; }
           .container #main .main-bottom .main-header {
             position: relative;
             font-size: 1em;
@@ -241,7 +241,9 @@ body {
               width: 100%; }
             .container #main .main-bottom .mobile-gallery figure figcaption {
               font-size: 2em;
-              bottom: 0; } }
+              bottom: 1em;
+              left: .5em;
+              line-height: 1.1; } }
       .container #main .main-bottom button {
         font-family: "Alata", sans-serif;
         font-weight: 600;
@@ -272,13 +274,30 @@ body {
         font-family: "Josefin Sans", sans-serif;
         font-weight: 600; }
       .container #main .main-bottom figure {
-        position: relative; }
+        position: relative;
+        transition: .3s; }
         .container #main .main-bottom figure figcaption {
           font-family: "Josefin Sans", sans-serif;
           position: absolute;
-          color: white;
+          color: #fffa;
+          font-weight: 500;
           text-transform: uppercase;
-          width: 40%; }
+          width: 40%;
+          transition: .3s; }
+        .container #main .main-bottom figure::before {
+          position: absolute;
+          content: '';
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          background: #fffa;
+          transition: .3s; }
+        .container #main .main-bottom figure:hover figcaption {
+          color: black; }
+        .container #main .main-bottom figure:hover::before {
+          opacity: 1; }
   .container #footer {
     grid-area: footer;
     background-color: black;
