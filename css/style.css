@@ -46,7 +46,8 @@ body {
         height: 100%;
         background-image: url(../images/icon-hamburger.svg);
         background-repeat: no-repeat;
-        background-size: contain; }
+        background-size: contain;
+        transition: .3s; }
       .container #header .hamburger::after {
         position: absolute;
         content: '';
@@ -57,7 +58,8 @@ body {
         opacity: 0;
         background-image: url(../images/icon-close.svg);
         background-repeat: no-repeat;
-        background-size: contain; }
+        background-size: contain;
+        transition: .3s; }
       .container #header .hamburger.active::before {
         opacity: 0; }
       .container #header .hamburger.active::after {
@@ -76,7 +78,7 @@ body {
         z-index: 3; }
         @media (max-width: 768px) {
           .container #header .navbar .logo img {
-            width: 70%; } }
+            width: 85%; } }
       .container #header .navbar .mobile-list {
         position: fixed;
         min-height: 100vh;
@@ -88,16 +90,24 @@ body {
         @media (min-width: 768px) {
           .container #header .navbar .mobile-list {
             display: none; } }
+        .container #header .navbar .mobile-list .mobile-nav-list {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          margin: 0 10vw; }
+          .container #header .navbar .mobile-list .mobile-nav-list li {
+            list-style: none;
+            padding: 1em 0; }
+            .container #header .navbar .mobile-list .mobile-nav-list li a {
+              font-family: "Josefin Sans", sans-serif;
+              color: #fffa;
+              font-size: 1.5em;
+              font-weight: 500;
+              letter-spacing: .1em;
+              text-transform: uppercase;
+              text-decoration: none; }
         .container #header .navbar .mobile-list.active {
           left: 0%; }
-        .container #header .navbar .mobile-list li {
-          list-style: none;
-          padding: .5em 0; }
-          .container #header .navbar .mobile-list li a {
-            color: #8c8c8c;
-            font-size: 2em;
-            text-transform: uppercase;
-            text-decoration: none; }
       .container #header .navbar .nav-list {
         display: flex;
         justify-content: space-evenly;
@@ -164,32 +174,32 @@ body {
         line-height: 1.2; }
   .container #main {
     grid-area: main; }
-    .container #main .about {
+    .container #main #about {
       margin: 0vh 0 15vh;
       height: 90vh;
       position: relative; }
       @media (max-width: 768px) {
-        .container #main .about {
+        .container #main #about {
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
           margin: 10vh 0 0vh; }
-          .container #main .about.about .mobile-img {
+          .container #main #about#about .mobile-img {
             position: relative; }
-          .container #main .about.about article {
+          .container #main #about#about article {
             position: relative;
             width: 100%;
             text-align: center;
             padding: 1.5em; }
-            .container #main .about.about article h1 {
+            .container #main #about#about article h1 {
               font-size: 2em; }
-            .container #main .about.about article p {
+            .container #main #about#about article p {
               padding: 0 1.5em; } }
-      .container #main .about .desktop-img {
+      .container #main #about .desktop-img {
         width: 60%;
         position: absolute;
         bottom: 0; }
-      .container #main .about article {
+      .container #main #about article {
         position: absolute;
         right: 0;
         width: 50%;
@@ -197,19 +207,19 @@ body {
         bottom: 0;
         background-color: white;
         padding: 4em 0 0 4em; }
-        .container #main .about article h1 {
+        .container #main #about article h1 {
           font-family: "Josefin Sans", sans-serif;
           text-transform: uppercase;
           font-size: 3em;
           letter-spacing: .1em; }
-        .container #main .about article p {
+        .container #main #about article p {
           font-family: "Alata", sans-serif;
           color: #8c8c8c; }
       @media (min-width: 1024px) {
-        .container #main .about .about-container {
+        .container #main #about .about-container {
           position: absolute;
           bottom: 0; }
-          .container #main .about .about-container p {
+          .container #main #about .about-container p {
             padding-right: 4.5em; } }
     @media (min-width: 1024px) {
       .container #main .mobile-img {

@@ -56,6 +56,7 @@ body {
                 background-image: url(../images/icon-hamburger.svg);
                 background-repeat: no-repeat;
                 background-size: contain;
+                transition: .3s;
             }
             &::after {
                 position: absolute;
@@ -68,6 +69,7 @@ body {
                 background-image: url(../images/icon-close.svg);
                 background-repeat: no-repeat;
                 background-size: contain;
+                transition: .3s;
             }
             // open - close transition
             &.active {
@@ -93,7 +95,7 @@ body {
                 // logo on mobile screen
                 @media (max-width: 768px){
                     img {
-                        width: 70%;
+                        width: 85%;
                     }
                 }
                 // end of logo on mobile screen
@@ -113,19 +115,33 @@ body {
                 top: 0;
                 left: 100%;
                 transition: .3s;
+                // z-index: 5;
+                // nav list items
+                .mobile-nav-list {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    margin: 0 10vw;
+
+                    li {
+                        list-style: none;
+                        padding: 1em 0;
+
+                        a {
+                            font-family: $font-sans;
+                            color: $white-trans;
+                            font-size: 1.5em;
+                            font-weight: 500;
+                            letter-spacing: .1em;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                        }
+
+                        //end of nav list items
+                    }
+                }
                 &.active {
                     left: 0%;
-                }
-                li {
-                    list-style: none;
-                    padding: .5em 0;
-
-                    a {
-                        color: $gray;
-                        font-size: 2em;
-                        text-transform: uppercase;
-                        text-decoration: none;
-                    }
                 }
             }
             // end of mobile nav style
@@ -223,7 +239,7 @@ body {
     #main {
         grid-area: main;
         // background-color: $white;
-        .about {
+        #about {
             // background-color: $white;
             // background-color: red;
             margin: 0vh 0 15vh;
@@ -235,10 +251,10 @@ body {
                 justify-content: space-evenly;
                 margin: 10vh 0 0vh;
                 // border: 1px solid red;
-                &.about .mobile-img {
+                &#about .mobile-img {
                     position: relative;
                 }
-                &.about article {
+                &#about article {
                     position: relative;
                     width: 100%;
                     text-align: center;
