@@ -387,6 +387,7 @@ body {
             figure {
                 position: relative;
                 transition: .3s;
+                cursor: pointer;
                 figcaption {
                     font-family: $font-sans;
                     position: absolute;
@@ -440,11 +441,12 @@ body {
             justify-content: center;
             align-items: center;
             color: $gray;
+            padding: 5vh;
             .footer-logo {
                 margin-bottom: 1em;
             }
             &#footer .brand-links {
-                border: 1px solid red;
+                margin: .5em auto;
                 text-align: center;
                 color: $white;
 
@@ -454,15 +456,14 @@ body {
                 }
             }
             .social-links {
-                border: 1px solid yellow;
 
                 ul {
                     display: flex;
-                    justify-content: center;
+                    justify-content: space-evenly;
                     align-items: center;
+                    margin: .5em auto;
 
                     li {
-                        margin: .5em;
                         list-style: none;
                     }
                 }
@@ -476,7 +477,7 @@ body {
         // desktop footer
         @media (min-width: 767px){
             color: $white;
-            padding: 1em 10vh;
+            padding: 5vh 10vh;
 
             .brand-links {
                 display: grid;
@@ -484,12 +485,33 @@ body {
                     display: flex;
                     justify-content: space-between;
                     margin: .5em auto;
-                    border: 1px solid red;
 
                     li {
-                        padding-right: 2em;
+                        // padding-right: 2em;
                         list-style: none;
                         margin: .5em 2em .5em 0;
+                        cursor: pointer;
+                        position: relative;
+                        // links underline and hover
+                        &::before {
+                            content:'';
+                            position: absolute;
+                            bottom: -.5em;
+                            width: 50%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            height: 2px;
+                            background-color: $white;
+                            transition: .3s ease;
+                            opacity: 0;
+                        }
+                        &:hover {
+                            &::before {
+                                opacity: 1;
+                                transform: translateX(-50%) translateY(-100%);
+                            }
+                        }
+                        // end of links underline and hover
                     }
                 }
             }
@@ -501,11 +523,32 @@ body {
                     display: flex;
                     justify-content: flex-end;
                     align-items: center;
-                    border: 1px solid red;
 
                     li {
                         list-style:none;
-                        padding: .5em 1em;
+                        margin: .5em 1em;
+                        position: relative;
+                        cursor: pointer;
+                        // links underline and hover
+                        &::before {
+                            content:'';
+                            position: absolute;
+                            bottom: 0em;
+                            width: 50%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            height: 2px;
+                            background-color: $white;
+                            transition: .2s ease;
+                            opacity: 0;
+                        }
+                        &:hover {
+                            &::before {
+                                opacity: 1;
+                                transform: translateX(-50%) translateY(-100%);
+                            }
+                        }
+                        // end of links underline and hover
                     }
                 }
                 
@@ -513,6 +556,10 @@ body {
                     display: flex;
                     justify-content: flex-end;
                     color: $gray;
+
+                    a {
+                        color: $white;
+                    }
                 }
             }
         }
