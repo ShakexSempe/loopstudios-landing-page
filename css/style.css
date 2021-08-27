@@ -75,9 +75,11 @@ body {
       height: 10vh;
       top: 0;
       width: 100vw;
+      position: fixed;
+      background: purple;
       z-index: 10; }
       .container #header .navbar .logo {
-        z-index: 3; }
+        z-index: 5; }
         @media (max-width: 768px) {
           .container #header .navbar .logo img {
             width: 85%; } }
@@ -89,7 +91,7 @@ body {
         top: 0;
         left: 100%;
         transition: .3s;
-        z-index: 2; }
+        z-index: 3; }
         @media (min-width: 768px) {
           .container #header .navbar .mobile-list {
             display: none; } }

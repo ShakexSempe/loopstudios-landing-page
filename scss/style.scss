@@ -91,9 +91,11 @@ body {
             height: 10vh;
             top: 0;
             width: 100vw;
+            position: fixed;
+            background: purple;
             z-index: 10;
             .logo {
-                z-index: 3;
+                z-index: 5;
                 // logo on mobile screen
                 @media (max-width: 768px){
                     img {
@@ -117,7 +119,7 @@ body {
                 top: 0;
                 left: 100%;
                 transition: .3s;
-                z-index: 2;
+                z-index: 3;
                 // nav list items
                 .mobile-nav-list {
                     position: absolute;
