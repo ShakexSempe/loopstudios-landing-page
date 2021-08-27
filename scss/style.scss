@@ -30,12 +30,14 @@ body {
     #header {
         grid-area: header;
         background-image: url(../images/desktop/image-hero.jpg);
-        background-position: center;
-        background-size: cover;
+        background-position: top;
+        background-size: 100%;
         background-repeat: no-repeat;
         @media (max-width: 768px) {
             background-image: url(../images/mobile/image-hero.jpg);
-            
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
         .hamburger {
             @media (min-width: 768px){
@@ -81,7 +83,7 @@ body {
 
         }
         .navbar {
-            background: rgba(255, 0, 0, 0.425);
+            background: #000;
             display: flex;
             justify-content: space-between;
             padding: 2em 10vw;
@@ -89,7 +91,7 @@ body {
             position: fixed;
             top: 0;
             width: 100vw;
-            z-index: 2;
+            z-index: 10;
             .logo {
                 z-index: 3;
                 // logo on mobile screen
@@ -206,7 +208,7 @@ body {
                 place-items: center;
                 width: auto;
                 position: relative;
-                top: 50%;
+                top: 45%;
                 transform: translateY(-50%);
                 margin: 1.5em;
                 padding: 2em;
@@ -249,7 +251,7 @@ body {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
-                margin: 10vh 0 0vh;
+                margin: 5vh;
                 // border: 1px solid red;
                 &#about .mobile-img {
                     position: relative;
