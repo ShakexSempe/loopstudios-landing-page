@@ -204,8 +204,8 @@ body {
             border: 3px solid white;
             width: 45%;
             padding: 3em ;
-            // backdrop-filter: blur(5px);
-            // -webkit-backdrop-filter: blur(5em);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(px);
             h1 {
                 font-family: $font-sans;
                 text-transform: uppercase;
