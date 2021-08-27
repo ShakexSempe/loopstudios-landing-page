@@ -6,7 +6,7 @@
   font-size: 15px; }
 
 body {
-  line-height: 1.6; }
+  line-height: 1.4; }
 
 .container {
   width: 100%;
@@ -254,7 +254,8 @@ body {
           .container #main .main-bottom .desktop-gallery figure figcaption {
             font-size: 2em;
             bottom: 1em;
-            left: 1em; } }
+            left: 1em;
+            width: 60%; } }
       @media (max-width: 768px) {
         .container #main .main-bottom {
           margin: 0 0 10vh;
@@ -279,7 +280,8 @@ body {
               font-size: 2em;
               bottom: 1em;
               left: .5em;
-              line-height: 1.1; } }
+              line-height: 1.1;
+              width: 45%; } }
       .container #main .main-bottom button {
         font-family: "Alata", sans-serif;
         font-weight: 600;
@@ -312,15 +314,17 @@ body {
       .container #main .main-bottom figure {
         position: relative;
         transition: .3s;
-        cursor: pointer; }
+        cursor: pointer;
+        overflow: hidden; }
         .container #main .main-bottom figure figcaption {
           font-family: "Josefin Sans", sans-serif;
           position: absolute;
           color: #fffa;
           font-weight: 500;
           text-transform: uppercase;
-          width: 40%;
-          transition: .3s; }
+          transition: .3s;
+          line-height: 1.1;
+          z-index: 4; }
         .container #main .main-bottom figure::before {
           position: absolute;
           content: '';
@@ -329,8 +333,12 @@ body {
           width: 100%;
           height: 100%;
           opacity: 0;
+          z-index: 3;
           background: #fffa;
-          transition: .3s; }
+          transition: 1s; }
+        .container #main .main-bottom figure:hover img {
+          transition: .2s;
+          transform: scale(1.05); }
         .container #main .main-bottom figure:hover figcaption {
           color: black; }
         .container #main .main-bottom figure:hover::before {
