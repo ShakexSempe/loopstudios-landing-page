@@ -38,11 +38,45 @@ body {
             
         }
         .hamburger {
-
-            z-index: 4;
             @media (min-width: 768px){
-            display: none;
+                display: none;
+                }
+            position: relative;
+            height: 2em;
+            width: 2em;
+            z-index: 4;
+            // hamburger logo and close logo
+            &::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url(../images/icon-hamburger.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
             }
+            &::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                background-image: url(../images/icon-close.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            // open - close transition
+            &.active {
+                &::before {opacity: 0;}
+                &::after {opacity: 1;}
+            }
+            // end of open - close transition
+            // end of hamburger logo and close logo
+
         }
         .navbar {
             background: rgba(255, 0, 0, 0.425);
@@ -66,7 +100,7 @@ body {
             }
             // mobile nav style
             // hide mobile nav on desktops
-            .mobile-nav-list {
+            .mobile-list {
                 @media (min-width: 768px){
                     display: none
                 }
@@ -78,22 +112,20 @@ body {
                 background-color: #000;
                 top: 0;
                 left: 100%;
+                transition: .3s;
                 &.active {
-                    left: 0;
-                }
-
-                ul {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    padding: 2em;
+                    left: 0%;
                 }
                 li {
-                    color: $gray;
                     list-style: none;
-                    font-size: 2em;
-                    text-transform: uppercase;
                     padding: .5em 0;
+
+                    a {
+                        color: $gray;
+                        font-size: 2em;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                    }
                 }
             }
             // end of mobile nav style
