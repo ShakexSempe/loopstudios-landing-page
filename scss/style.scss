@@ -31,7 +31,7 @@ body {
         grid-area: header;
         background-image: url(../images/desktop/image-hero.jpg);
         background-position: top;
-        background-size: 100%;
+        background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
         @media (max-width: 768px) {
@@ -217,8 +217,9 @@ body {
             }
             @media (min-width: 1024px){
                 position: relative;
-                top: 21%;
+                top: 25vh;
                 left: 12vw;
+
             }
             @media (max-width: 768px) {
                 display: grid;
@@ -250,8 +251,9 @@ body {
 
         #about {
             margin: 0vh 0 15vh;
-            height: 90vh;
+            height: 100vh;
             position: relative;
+            overflow: hidden;
             @media (max-width: 330px) {
                 display: none;
             }
@@ -289,12 +291,7 @@ body {
                 }
             }
 
-            .desktop-img {
-                width: 60%;
-                position: absolute;
-                bottom: 0;
-
-            }
+            
             article {
                 position: absolute;
                 right: 0;
@@ -318,23 +315,48 @@ body {
                     color: $gray;
                 }
             }
-            @media (min-width: 1024px){
-                .about-container {
+            @media (min-width: 1024px) {
+                margin: 10vh 0 20vh;
+                height: 60vh;
+                // background-color: blue;
+                .desktop-img {
+                    height: 100%;
+                    width: 65%;
                     position: absolute;
                     bottom: 0;
+                    overflow: hidden;
 
-                    p {
-                        padding-right: 4.5em;
+                    img {
+                        height: 100%;
+                        width: 100%;
+
+                    }
+                }
+                article {
+                    // background-color: red;
+                    height: 60%;
+                    .about-container {
+                        // background-color: yellow;
+
+                        position: absolute;
+                        bottom: 0;
+                        h1 {
+                            font-size: 2.5em;
+                            margin-bottom: 1em;
+                        }
+                        p {
+                            padding-right: 4.5em;
+                        }
                     }
                 }
             }
         }
 
         // VR image media query
-        @media (min-width: 1024px){
+        @media (min-width: 769px){
             .mobile-img {display: none;}
         }
-        @media (max-width: 1024px){
+        @media (max-width: 768px){
             .desktop-img {display: none;}
             .mobile-img {
                 img {

@@ -24,7 +24,7 @@ body {
     grid-area: header;
     background-image: url(../images/desktop/image-hero.jpg);
     background-position: top;
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; }
     @media (max-width: 768px) {
@@ -162,7 +162,7 @@ body {
       @media (min-width: 1024px) {
         .container #header .hero {
           position: relative;
-          top: 21%;
+          top: 25vh;
           left: 12vw; } }
       @media (max-width: 768px) {
         .container #header .hero {
@@ -183,8 +183,9 @@ body {
     grid-area: main; }
     .container #main #about {
       margin: 0vh 0 15vh;
-      height: 90vh;
-      position: relative; }
+      height: 100vh;
+      position: relative;
+      overflow: hidden; }
       @media (max-width: 330px) {
         .container #main #about {
           display: none; } }
@@ -218,10 +219,6 @@ body {
       @media (max-width: 768px) and (max-width: 320px) {
         .container #main #about#about article p {
           font-size: 1em; } }
-      .container #main #about .desktop-img {
-        width: 60%;
-        position: absolute;
-        bottom: 0; }
       .container #main #about article {
         position: absolute;
         right: 0;
@@ -239,15 +236,32 @@ body {
           font-family: "Alata", sans-serif;
           color: #8c8c8c; }
       @media (min-width: 1024px) {
-        .container #main #about .about-container {
-          position: absolute;
-          bottom: 0; }
-          .container #main #about .about-container p {
-            padding-right: 4.5em; } }
-    @media (min-width: 1024px) {
+        .container #main #about {
+          margin: 10vh 0 20vh;
+          height: 60vh; }
+          .container #main #about .desktop-img {
+            height: 100%;
+            width: 65%;
+            position: absolute;
+            bottom: 0;
+            overflow: hidden; }
+            .container #main #about .desktop-img img {
+              height: 100%;
+              width: 100%; }
+          .container #main #about article {
+            height: 60%; }
+            .container #main #about article .about-container {
+              position: absolute;
+              bottom: 0; }
+              .container #main #about article .about-container h1 {
+                font-size: 2.5em;
+                margin-bottom: 1em; }
+              .container #main #about article .about-container p {
+                padding-right: 4.5em; } }
+    @media (min-width: 769px) {
       .container #main .mobile-img {
         display: none; } }
-    @media (max-width: 1024px) {
+    @media (max-width: 768px) {
       .container #main .desktop-img {
         display: none; }
       .container #main .mobile-img img {
