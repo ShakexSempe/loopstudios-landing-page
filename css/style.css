@@ -488,9 +488,9 @@ body {
                 bottom: -.5em;
                 width: 50%;
                 left: 50%;
-                transform: translateX(-50%);
+                transform: translateX(-50%) translateY(0.5em);
                 height: 2px;
-                background-color: white;
+                background-color: #fffa;
                 transition: .3s ease;
                 opacity: 0; }
               .container #footer .brand-links ul li:hover {
@@ -516,7 +516,7 @@ body {
                 bottom: -.2em;
                 width: 100%;
                 left: 50%;
-                transform: translateX(-50%);
+                transform: translateX(-50%) translateY(0.5em);
                 height: 2px;
                 background-color: white;
                 transition: .2s ease;
