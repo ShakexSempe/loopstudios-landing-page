@@ -124,27 +124,33 @@ body {
           list-style: none;
           color: white;
           font-family: "Josefin Sans", sans-serif;
-          text-transform: capitalize; }
+          text-transform: capitalize;
+          padding: .5em;
+          transition: .2s; }
           .container #header .navbar .nav-list li a {
             color: white;
             font-weight: 600;
             margin: .4em auto;
             text-decoration: none;
-            position: relative; }
+            display: block;
+            position: relative;
+            transition: .2s; }
             .container #header .navbar .nav-list li a::before {
               content: '';
               position: absolute;
               bottom: -.5em;
               width: 50%;
               left: 50%;
-              transform: translateX(-50%);
+              transform: translateX(-50%) translateY(0.5em);
               height: 2px;
               background-color: white;
               transition: .2s ease;
               opacity: 0; }
-            .container #header .navbar .nav-list li a:hover::before {
-              opacity: 1;
-              transform: translateX(-50%) translateY(-100%); }
+            .container #header .navbar .nav-list li a:hover {
+              transform: scale(1.25); }
+              .container #header .navbar .nav-list li a:hover::before {
+                opacity: 1;
+                transform: translateX(-50%) translateY(-100%); }
     .container #header .hero {
       border: 3px solid white;
       width: 45%;
@@ -345,6 +351,9 @@ body {
         .container #main .main-bottom button:hover {
           background-color: black;
           color: white; }
+        .container #main .main-bottom button:active {
+          transition: .2s;
+          transform: scale(0.9); }
       .container #main .main-bottom .main-header h1 {
         font-size: 2em;
         text-transform: uppercase;
