@@ -35,11 +35,12 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
+- Grid Template Area, columns and rows used to layout the whole page on desktop and mobile screens.
 - Styled using SCSS variables, nested styles and variables.
 - Parallax scrolling on the header element which also contains the navigation elements.
-- Flexbox layout used in the about and footer portfolio section.
-- CSS3 box shadows around contact and social media links
-- Testimonal (#projects) section styled with CSS Grid.
+- Flexbox used to layout the footer logo, icons and links.
+- CSS3 box shadows around the gallery button.
+- Creations gallery popoulated via Javascript Template Literal objects.
 - Responsive design.
 
 ### What I learned
