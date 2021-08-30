@@ -45,7 +45,7 @@ Users should be able to:
 
 ### What I learned
 
-I learned the importance of a good color theme and font weights in display information.
+I got good practice on CSS Grid template columns, grid template rows and grid template areas.
 
 ### Continued development
 
