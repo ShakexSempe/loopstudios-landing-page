@@ -40,6 +40,7 @@ body {
             background-position: center;
             background-attachment: fixed;
         }
+        // hamburger button
         .hamburger {
             @media (min-width: 768px){
                 display: none;
@@ -48,6 +49,8 @@ body {
             height: 2em;
             width: 2em;
             z-index: 4;
+            cursor: pointer;
+            display:block;
             // hamburger logo and close logo
             &::before {
                 position: absolute;
@@ -59,7 +62,7 @@ body {
                 background-image: url(../images/icon-hamburger.svg);
                 background-repeat: no-repeat;
                 background-size: contain;
-                transition: .3s;
+                transition: .5s ease;
             }
             &::after {
                 position: absolute;
@@ -72,7 +75,7 @@ body {
                 background-image: url(../images/icon-close.svg);
                 background-repeat: no-repeat;
                 background-size: contain;
-                transition: .3s;
+                transition: .5s ease;
             }
             // open - close transition
             &.active {
@@ -83,6 +86,8 @@ body {
             // end of hamburger logo and close logo
 
         }
+        // end of hamburger menu
+
         .navbar {
             // background: rgb(107, 2, 107);
             display: flex;
@@ -118,7 +123,7 @@ body {
                 background-color: #000;
                 top: 0;
                 left: 100%;
-                transition: .3s;
+                transition: .5s;
                 z-index: 3;
                 // nav list items
                 .mobile-nav-list {

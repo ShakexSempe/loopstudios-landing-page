@@ -37,7 +37,9 @@ body {
       position: relative;
       height: 2em;
       width: 2em;
-      z-index: 4; }
+      z-index: 4;
+      cursor: pointer;
+      display: block; }
       @media (min-width: 768px) {
         .container #header .hamburger {
           display: none; } }
@@ -51,7 +53,7 @@ body {
         background-image: url(../images/icon-hamburger.svg);
         background-repeat: no-repeat;
         background-size: contain;
-        transition: .3s; }
+        transition: .5s ease; }
       .container #header .hamburger::after {
         position: absolute;
         content: '';
@@ -63,7 +65,7 @@ body {
         background-image: url(../images/icon-close.svg);
         background-repeat: no-repeat;
         background-size: contain;
-        transition: .3s; }
+        transition: .5s ease; }
       .container #header .hamburger.active::before {
         opacity: 0; }
       .container #header .hamburger.active::after {
@@ -88,7 +90,7 @@ body {
         background-color: #000;
         top: 0;
         left: 100%;
-        transition: .3s;
+        transition: .5s;
         z-index: 3; }
         @media (min-width: 768px) {
           .container #header .navbar .mobile-list {
