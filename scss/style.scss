@@ -62,7 +62,7 @@ body {
                 background-image: url(../images/icon-hamburger.svg);
                 background-repeat: no-repeat;
                 background-size: contain;
-                transition: .5s ease;
+                transition: .3s ease;
             }
             &::after {
                 position: absolute;
@@ -75,7 +75,7 @@ body {
                 background-image: url(../images/icon-close.svg);
                 background-repeat: no-repeat;
                 background-size: contain;
-                transition: .5s ease;
+                transition: .3s ease;
             }
             // open - close transition
             &.active {
