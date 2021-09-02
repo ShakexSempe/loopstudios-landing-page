@@ -53,7 +53,7 @@ body {
         background-image: url(../images/icon-hamburger.svg);
         background-repeat: no-repeat;
         background-size: contain;
-        transition: .5s ease; }
+        transition: .3s ease; }
       .container #header .hamburger::after {
         position: absolute;
         content: '';
@@ -65,7 +65,7 @@ body {
         background-image: url(../images/icon-close.svg);
         background-repeat: no-repeat;
         background-size: contain;
-        transition: .5s ease; }
+        transition: .3s ease; }
       .container #header .hamburger.active::before {
         opacity: 0; }
       .container #header .hamburger.active::after {
@@ -545,4 +545,20 @@ body {
             justify-content: flex-end;
             color: #8c8c8c; }
             .container #footer .social-links p a {
-              color: white; } }
+              color: white;
+              text-decoration: none;
+              position: relative; }
+              .container #footer .social-links p a::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%) translateY(0.5em);
+                width: 50%;
+                height: 1px;
+                background-color: #fffa;
+                transition: .3s ease;
+                opacity: 0; }
+              .container #footer .social-links p a:hover::before {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0); } }
