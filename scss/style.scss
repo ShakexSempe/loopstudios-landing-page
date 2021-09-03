@@ -645,6 +645,7 @@ body {
                             transform: translateY(1em);
                             transition: .2s;
                         }
+                        
                         // footer social icon hover state
                         &:hover {
                             transition: .3s;
@@ -655,7 +656,6 @@ body {
                             }
                         }
                         // end of footer social icon hover state
-
                     }
                     // end of footer social icons
 
@@ -665,6 +665,28 @@ body {
                     text-align: center;
                     a {
                         color: $white;
+                        text-decoration: none;
+                        position: relative;
+
+                        &::before {
+                            position: absolute;
+                            content: '';
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%) translateY(.5em);
+                            width: 50%;
+                            height: 2px;
+                            background-color:$white-trans;
+                            transition: .3s;
+                            opacity: 0;
+
+                        }
+                        &:hover {
+                            &::before {
+                                opacity: 1;
+                            transform: translateY(0) translateX(-50%);
+                            }
+                        }
                     }
                 }
             }
