@@ -24,7 +24,7 @@ body {
   .container #header {
     grid-area: header;
     background-image: url(../images/desktop/image-hero.jpg);
-    background-position: top;
+    background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed; }
@@ -33,15 +33,17 @@ body {
         background-image: url(../images/mobile/image-hero.jpg);
         background-size: cover;
         background-position: center;
-        background-attachment: fixed; } }
+        background-attachment: fixed; }
+        .container #header::before {
+          display: none; } }
     .container #header .hamburger {
       position: relative;
       height: 2em;
       width: 2em;
-      z-index: 4;
+      z-index: 6;
       cursor: pointer;
       display: block; }
-      @media (min-width: 768px) {
+      @media (min-width: 1024px) {
         .container #header .hamburger {
           display: none; } }
       .container #header .hamburger::before {
@@ -80,7 +82,7 @@ body {
       width: 100vw;
       z-index: 10; }
       .container #header .navbar .logo {
-        z-index: 5; }
+        z-index: 6; }
         @media (max-width: 768px) {
           .container #header .navbar .logo img {
             width: 85%; } }
@@ -92,8 +94,8 @@ body {
         top: 0;
         left: 100%;
         transition: .5s;
-        z-index: 3; }
-        @media (min-width: 768px) {
+        z-index: 5; }
+        @media (min-width: 1024px) {
           .container #header .navbar .mobile-list {
             display: none; } }
         .container #header .navbar .mobile-list .mobile-nav-list {
@@ -106,7 +108,7 @@ body {
             padding: 1em 0; }
             .container #header .navbar .mobile-list .mobile-nav-list li a {
               font-family: "Josefin Sans", sans-serif;
-              color: #fffa;
+              color: #8c8c8c;
               font-size: 1.5em;
               font-weight: 500;
               letter-spacing: .1em;
@@ -118,21 +120,34 @@ body {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        padding: 1em; }
+        padding: 1em;
+        position: relative; }
         @media (max-width: 768px) {
           .container #header .navbar .nav-list {
             display: none; } }
+        .container #header .navbar .nav-list::before {
+          position: absolute;
+          content: '';
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+          transition: .3s;
+          background-image: linear-gradient(90deg, #000a 10%, transparent 50%); }
+        .container #header .navbar .nav-list:hover::before {
+          opacity: 0; }
         .container #header .navbar .nav-list li {
           margin: 0 .5em;
           list-style: none;
           color: white;
-          font-family: "Josefin Sans", sans-serif;
           text-transform: capitalize;
           padding: .5em;
           transition: .2s; }
           .container #header .navbar .nav-list li a {
+            font-family: "Alata", sans-serif;
             color: white;
-            font-weight: 600;
+            font-weight: 500;
             margin: .4em auto;
             text-decoration: none;
             display: block;
@@ -141,11 +156,12 @@ body {
             .container #header .navbar .nav-list li a::before {
               content: '';
               position: absolute;
-              bottom: -.5em;
+              bottom: -.7em;
               width: 50%;
               left: 50%;
               transform: translateX(-50%) translateY(0.5em);
-              height: 2px;
+              height: 3px;
+              border-radius: 5px;
               background-color: white;
               transition: .2s ease;
               opacity: 0; }
@@ -155,7 +171,7 @@ body {
                 opacity: 1;
                 transform: translateX(-50%) translateY(-100%); }
     .container #header .hero {
-      border: 3px solid white;
+      border: 2px solid white;
       width: 45%;
       padding: 3em;
       backdrop-filter: blur(5px);
@@ -163,9 +179,9 @@ body {
       .container #header .hero h1 {
         font-family: "Josefin Sans", sans-serif;
         text-transform: uppercase;
-        color: #fff;
+        color: white;
         font-size: 3.5em;
-        font-weight: 500;
+        font-weight: 100;
         letter-spacing: .2em;
         line-height: 1.2; }
       @media (min-width: 1200px) {
@@ -243,7 +259,8 @@ body {
           letter-spacing: .1em; }
         .container #main #about article p {
           font-family: "Alata", sans-serif;
-          color: #8c8c8c; }
+          color: #8c8c8c;
+          font-weight: 500; }
       @media (min-width: 1024px) {
         .container #main #about {
           margin: 20vh 0;
@@ -325,14 +342,14 @@ body {
           .container #main .main-bottom .mobile-gallery {
             display: grid;
             gap: 2em; }
-            .container #main .main-bottom .mobile-gallery figure img {
-              width: 100%; }
-            .container #main .main-bottom .mobile-gallery figure figcaption {
-              font-size: 1.7em;
-              bottom: 1em;
-              left: .5em;
-              line-height: 1.1;
-              width: 45%; } }
+            .container #main .main-bottom .mobile-gallery figure {
+              border-radius: 3px; }
+              .container #main .main-bottom .mobile-gallery figure figcaption {
+                font-size: 1.7em;
+                bottom: 1em;
+                left: .5em;
+                line-height: 1.1;
+                width: 45%; } }
       .container #main .main-bottom button {
         font-family: "Alata", sans-serif;
         font-weight: 600;
@@ -352,23 +369,28 @@ body {
           width: 100%;
           height: 100%;
           border-radius: 3px;
-          box-shadow: inset 2px 2px 5px #ddda, inset -2px -2px 5px #000; }
+          box-shadow: inset 3px 3px 5px #ddda, inset -2px -2px 5px #000; }
         .container #main .main-bottom button:hover {
           background-color: black;
           color: white; }
         .container #main .main-bottom button:active {
+          letter-spacing: .1em;
           transition: .2s;
           transform: scale(0.9); }
       .container #main .main-bottom .main-header h1 {
         font-size: 2em;
         text-transform: uppercase;
         font-family: "Josefin Sans", sans-serif;
-        font-weight: 600; }
+        font-weight: 500; }
       .container #main .main-bottom figure {
         position: relative;
         transition: .3s;
         cursor: pointer;
-        overflow: hidden; }
+        overflow: hidden;
+        border-radius: 3px; }
+        .container #main .main-bottom figure img {
+          width: 100%;
+          height: 100%; }
         .container #main .main-bottom figure figcaption {
           font-family: "Josefin Sans", sans-serif;
           position: absolute;
@@ -415,7 +437,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 5vh 0;
+    margin: 0;
     font-family: "Josefin Sans", sans-serif;
     text-transform: capitalize; }
     @media (max-width: 1024px) {
@@ -478,7 +500,8 @@ body {
                 opacity: 1;
                 transform: translateY(0); }
         .container #footer .social-links p {
-          text-align: center; }
+          text-align: center;
+          margin-bottom: .3em; }
           .container #footer .social-links p a {
             color: white;
             text-decoration: none;
@@ -497,7 +520,7 @@ body {
             .container #footer .social-links p a:hover::before {
               opacity: 1;
               transform: translateY(0) translateX(-50%); } }
-    @media (min-width: 767px) {
+    @media (min-width: 768px) {
       .container #footer {
         color: white;
         padding: 5vh 10vw; }
@@ -509,7 +532,7 @@ body {
             margin: .5em auto; }
             .container #footer .brand-links ul li {
               list-style: none;
-              margin: .5em 2em .5em 0;
+              margin: .5em 4em .5em 0;
               cursor: pointer;
               position: relative; }
               .container #footer .brand-links ul li::before {
@@ -520,7 +543,7 @@ body {
                 left: 50%;
                 transform: translateX(-50%) translateY(0.5em);
                 height: 2px;
-                background-color: #fffa;
+                background-color: white;
                 transition: .3s ease;
                 opacity: 0; }
               .container #footer .brand-links ul li:hover {
@@ -560,7 +583,8 @@ body {
           .container #footer .social-links p {
             display: flex;
             justify-content: flex-end;
-            color: #8c8c8c; }
+            color: #8c8c8c;
+            margin-bottom: .3em; }
             .container #footer .social-links p a {
               color: white;
               text-decoration: none;
@@ -573,7 +597,7 @@ body {
                 transform: translateX(-50%) translateY(0.5em);
                 width: 50%;
                 height: 1px;
-                background-color: #fffa;
+                background-color: white;
                 transition: .3s ease;
                 opacity: 0; }
               .container #footer .social-links p a:hover::before {
