@@ -51,8 +51,8 @@ body {
                 display: none;
                 }
             position: relative;
-            height: 2em;
-            width: 2em;
+            height: 1.5em;
+            width: 1.5em;
             z-index: 6;
             cursor: pointer;
             display:block;
@@ -101,15 +101,19 @@ body {
             height: 10vh;
             top: 0;
             width: 100vw;
-            // position: fixed;
-            // background: purple;
             z-index: 10;
+            // navbar fixed on mobile
+            @media (max-width: 768px) {
+                position: fixed;
+                background: rgba(0, 0, 0, 0.833);
+            }
+            // end of navbar fixed on mobile
             .logo {
                 z-index: 6;
                 // logo on mobile screen
                 @media (max-width: 768px){
                     img {
-                        width: 85%;
+                        width: 70%;
                     }
                 }
                 // end of logo on mobile screen
