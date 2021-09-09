@@ -296,8 +296,15 @@ body {
     @media (max-width: 768px) {
       .container #main .desktop-img {
         display: none; }
-      .container #main .mobile-img img {
-        width: 100%; } }
+      .container #main .mobile-img {
+        overflow: hidden;
+        border: 1px solid pink; }
+        .container #main .mobile-img img {
+          width: 100%;
+          animation: zoom 5s infinite; }
+      @keyframes zoom {
+        50% {
+          transform: scale(1.04); } } }
     .container #main .main-bottom {
       position: relative;
       padding: 5vh 0; }
