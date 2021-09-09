@@ -414,6 +414,7 @@ body {
                     @keyframes zoom {
                         50% {
                             transform: scale(1.04);
+                            transform-origin: left;
                         }
                     }
                 }

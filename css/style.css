@@ -304,7 +304,8 @@ body {
           animation: zoom 5s infinite; }
       @keyframes zoom {
         50% {
-          transform: scale(1.04); } } }
+          transform: scale(1.04);
+          transform-origin: left; } } }
     .container #main .main-bottom {
       position: relative;
       padding: 5vh 0; }
