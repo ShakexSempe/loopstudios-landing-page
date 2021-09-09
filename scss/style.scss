@@ -40,7 +40,6 @@ body {
             background-image: url(../images/mobile/image-hero.jpg);
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
             &::before {
                 display: none;
             }
@@ -105,7 +104,7 @@ body {
             // navbar fixed on mobile
             @media (max-width: 768px) {
                 position: fixed;
-                background: rgba(0, 0, 0, 0.833);
+                background: rgb(37, 1, 37);
             }
             // end of navbar fixed on mobile
             .logo {
@@ -268,7 +267,7 @@ body {
                 place-items: center;
                 width: auto;
                 position: relative;
-                top: 35%;
+                top: 50%;
                 transform: translateY(-50%);
                 margin: 1.5em;
                 padding: 2em;
@@ -469,7 +468,7 @@ body {
                     position: relative;
                     font-size: 1em;
                     text-align: center;
-                    margin: 5vh 0 10vh;
+                    margin: 0 0 5vh 0;
                 }
                 .mobile-gallery {
                     display: grid;
