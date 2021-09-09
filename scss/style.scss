@@ -406,7 +406,7 @@ body {
             .desktop-img {display: none;}
             .mobile-img {
                 overflow: hidden;
-                border: 1px solid pink;
+                border: 1px solid $white;
                 img {
                     width: 100%;
                     animation: zoom 5s infinite;

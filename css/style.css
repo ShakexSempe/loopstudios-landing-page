@@ -298,7 +298,7 @@ body {
         display: none; }
       .container #main .mobile-img {
         overflow: hidden;
-        border: 1px solid pink; }
+        border: 1px solid white; }
         .container #main .mobile-img img {
           width: 100%;
           animation: zoom 5s infinite; }
