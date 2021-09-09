@@ -409,11 +409,12 @@ body {
                 border: 1px solid $white;
                 img {
                     width: 100%;
-                    animation: zoom 5s infinite;
+                    height: 100%;
+                    animation: zoom 10s infinite;
 
                     @keyframes zoom {
                         50% {
-                            transform: scale(1.04);
+                            transform: scale(1.1);
                             transform-origin: left;
                         }
                     }
