@@ -333,9 +333,9 @@ body {
             width: 100%; }
           .container #main .main-bottom .desktop-gallery figure figcaption {
             font-size: 2em;
-            bottom: 1em;
-            left: 1em;
-            width: 60%; } }
+            bottom: 1.5em;
+            left: 1.5em;
+            max-width: 60%; } }
       @media (max-width: 1024px) {
         .container #main .main-bottom {
           margin: 0 0 10vh;
@@ -358,8 +358,8 @@ body {
             .container #main .main-bottom .mobile-gallery figure {
               border-radius: 3px; }
               .container #main .main-bottom .mobile-gallery figure figcaption {
-                font-size: 1.7em;
-                bottom: 1em;
+                font-size: 1.8em;
+                bottom: .5em;
                 left: .5em;
                 line-height: 1.1;
                 width: 45%; } }

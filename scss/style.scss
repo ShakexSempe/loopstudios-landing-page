@@ -456,10 +456,11 @@ body {
                         }
                         figcaption {
                             font-size: 2em;
-                            bottom: 1em;
-                            left: 1em;
-                            width: 60%;
+                            bottom: 1.5em;
+                            left: 1.5em;
+                            max-width: 60%;
                         }
+                        
                     }
                 }
             }
@@ -489,8 +490,8 @@ body {
                         border-radius: 3px;
                         
                         figcaption {
-                            font-size: 1.7em;
-                            bottom: 1em;
+                            font-size: 1.8em;
+                            bottom: .5em;
                             left: .5em;
                             line-height: 1.1;
                             width: 45%;
