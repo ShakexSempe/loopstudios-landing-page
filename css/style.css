@@ -223,7 +223,8 @@ body {
           display: flex;
           flex-direction: column;
           justify-content: space-evenly;
-          margin: 0 5vh; }
+          margin: 0 5vh;
+          height: 90vh; }
           .container #main #about#about .mobile-img {
             position: relative; }
           .container #main #about#about article {
