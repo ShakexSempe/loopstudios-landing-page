@@ -302,8 +302,9 @@ body {
             @media (max-width: 768px){
                 display: flex;
                 flex-direction: column;
-                justify-content: space-evenly;
-                margin: 0 5vh;
+                justify-content: center;
+                height: auto;
+                margin: 10vh 5vh;
                 // border: 1px solid red;
                 &#about .mobile-img {
                     position: relative;
@@ -349,8 +350,7 @@ body {
                     font-family: $font-josefin;
                     text-transform: uppercase;
                     font-size: 3em;
-                    
-                    letter-spacing: .1em;
+                    letter-spacing: .05em;
                 }
                 p {
                     font-family: $font-alata;
@@ -407,6 +407,7 @@ body {
             .mobile-img {
                 overflow: hidden;
                 border: 1px solid $white;
+                margin-bottom: 5vh;
                 img {
                     width: 100%;
                     height: 100%;
@@ -495,7 +496,9 @@ body {
                             left: .5em;
                             line-height: 1.1;
                             width: 45%;
-
+                            span {
+                                font-size: inherit;
+                            }
                         }
                     }
                 }
@@ -540,7 +543,7 @@ body {
                     font-size: 2em;
                     text-transform: uppercase;
                     font-family: $font-josefin;
-                    font-weight: 500;
+                    font-weight: 600;
                 }
             }
             figure {
@@ -559,10 +562,16 @@ body {
                     color: $white;
                     font-weight: 500;
                     text-transform: uppercase;
+                    letter-spacing: .05em;
                     transition: .5s;
                     line-height: 1.1;
                     z-index: 4;
-
+                    // 'the grid' 
+                    span {
+                        display: block;
+                        font-size: 1em;
+                    }
+                    // end of 'the grid' 
                 }
                 &::before {
                     position: absolute;

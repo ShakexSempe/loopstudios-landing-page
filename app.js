@@ -50,7 +50,7 @@ const work = [
     },
     {
         id: 4,
-        title: "The grid" ,
+        title: `The<span>grid</span>` ,
         desktop: "images/desktop/image-grid.jpg",
         mobile: "images/mobile/image-grid.jpg",
     },
