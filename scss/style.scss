@@ -31,15 +31,17 @@ body {
     #header {
         grid-area: header;
         background-image: url(../images/desktop/image-hero.jpg);
-        background-position: bottom;
+        // background-position: bottom;
         background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
+        background-position: top center;
+        height: 90vh;
         
         @media (max-width: 768px) {
             background-image: url(../images/mobile/image-hero.jpg);
-            background-size: cover;
-            background-position: center;
+            background-position: top left;
+            background-size: contain;
+            background-repeat: no-repeat;
+            height: 100vh;
             &::before {
                 display: none;
             }
@@ -96,15 +98,16 @@ body {
             // background: rgb(107, 2, 107);
             display: flex;
             justify-content: space-between;
-            padding: 5vh 10vw;
+            padding: 10vh 10vw;
             height: 10vh;
             top: 0;
             width: 100vw;
             z-index: 10;
             // navbar fixed on mobile
             @media (max-width: 768px) {
-                position: fixed;
-                background: rgb(37, 1, 37);
+                // position: fixed;
+                // background: rgb(37, 1, 37);
+                padding: 5vh 10vw;
             }
             // end of navbar fixed on mobile
             .logo {
@@ -184,7 +187,6 @@ body {
             // background: rgba(0, 0, 0, 0.203);
             border-radius: 5px;
             transition: .3s;
-            background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.411) 10%, transparent 50%);
         }
         // remove overlay on hover
         &:hover {
@@ -246,15 +248,15 @@ body {
             width: 45%;
             padding: 3em;
             border-radius: 2px;
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
             h1 {
                 font-family: $font-josefin;
                 text-transform: uppercase;
                 color: $white;
                 font-size: 3.5em;
                 font-weight: 100;
-                letter-spacing: .2em;
+                letter-spacing: .1em;
                 line-height: 1.2;
             }
             @media (min-width: 1200px){
@@ -268,13 +270,13 @@ body {
                 place-items: center;
                 width: auto;
                 position: relative;
-                top: 45%;
+                top: 37%;
                 transform: translateY(-50%);
                 margin: 1.5em;
-                padding: 2em;
+                padding: 1.5em 1em;
 
                 &.hero h1 {
-                    font-size: 2em;
+                    font-size: 2.5em;
                 }
             }
             @media (max-width: 360px){
@@ -304,7 +306,7 @@ body {
                 flex-direction: column;
                 justify-content: center;
                 height: auto;
-                margin: 10vh 5vh;
+                margin: 0 5vw 10vh;
                 // border: 1px solid red;
                 &#about .mobile-img {
                     position: relative;

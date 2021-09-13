@@ -13,12 +13,7 @@ hamburger.addEventListener("click", () => {
 });
 
 // remove nav-list when item selected
-navItem.forEach(item => {
-    item.addEventListener("click" , () => {
-        navList.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
-});
+// 
 
 
 //   
