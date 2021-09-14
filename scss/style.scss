@@ -32,14 +32,15 @@ body {
         grid-area: header;
         background-image: url(../images/desktop/image-hero.jpg);
         // background-position: bottom;
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
         background-position: top center;
-        height: 90vh;
+        height: 80vh;
         
         @media (max-width: 768px) {
             background-image: url(../images/mobile/image-hero.jpg);
-            background-position: top left;
-            background-size: contain;
+            background-position: bottom left;
+            background-size: cover;
             background-repeat: no-repeat;
             height: 100vh;
             &::before {
@@ -261,8 +262,8 @@ body {
             }
             @media (min-width: 1200px){
                 position: relative;
-                top: 25vh;
-                left: 10vw;
+                top: 8%;
+                left: 12vw;
 
             }
             @media (max-width: 1200px) {
@@ -361,7 +362,7 @@ body {
                 }
             }
             @media (min-width: 1024px) {
-                margin: 20vh 0;
+                margin: 0 0 10vh;
                 height: 65vh;
                 // background-color: blue;
                 .desktop-img {
