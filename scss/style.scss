@@ -15,13 +15,13 @@ body {
     width: 100%;
     overflow: hidden;
     display: grid;
-    grid-template-rows: 100vh auto auto;
+    grid-template-rows: 80vh auto auto;
     grid-template-columns: 10vw 80vw 10vw;
     grid-template-areas: "header header header"
                         ". main ."
                         "footer footer footer";
     @media (max-width: 500px){
-        grid-template-rows: 100vh auto auto;
+        grid-template-rows: 90vh auto auto;
         grid-template-columns: 100%;
         grid-template-areas: "header"
                                 "main"
@@ -32,17 +32,16 @@ body {
         grid-area: header;
         background-image: url(../images/desktop/image-hero.jpg);
         // background-position: bottom;
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
-        background-position: top center;
-        height: 80vh;
+        // background-position: top center;
+        // height: 80vh;
         
         @media (max-width: 768px) {
             background-image: url(../images/mobile/image-hero.jpg);
-            background-position: bottom left;
+            background-position: center left;
             background-size: cover;
             background-repeat: no-repeat;
-            height: 100vh;
             &::before {
                 display: none;
             }
@@ -293,6 +292,7 @@ body {
 // main
     #main {
         grid-area: main;
+        margin: 20vh 0 10vh;
 
         #about {
             margin: 0vh 0 15vh;
@@ -329,7 +329,7 @@ body {
                         }
                     }
                     p {
-                        padding: 1em .5em;
+                        padding: 1em 1.5em;
                         @media (max-width: 320px) {
                             font-size: 1em;
                         }

@@ -13,28 +13,25 @@ body {
   width: 100%;
   overflow: hidden;
   display: grid;
-  grid-template-rows: 100vh auto auto;
+  grid-template-rows: 80vh auto auto;
   grid-template-columns: 10vw 80vw 10vw;
   grid-template-areas: "header header header" ". main ." "footer footer footer"; }
   @media (max-width: 500px) {
     .container {
-      grid-template-rows: 100vh auto auto;
+      grid-template-rows: 90vh auto auto;
       grid-template-columns: 100%;
       grid-template-areas: "header" "main" "footer"; } }
   .container #header {
     grid-area: header;
     background-image: url(../images/desktop/image-hero.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: top center;
-    height: 80vh; }
+    background-size: cover;
+    background-repeat: no-repeat; }
     @media (max-width: 768px) {
       .container #header {
         background-image: url(../images/mobile/image-hero.jpg);
-        background-position: bottom left;
+        background-position: center left;
         background-size: cover;
-        background-repeat: no-repeat;
-        height: 100vh; }
+        background-repeat: no-repeat; }
         .container #header::before {
           display: none; } }
     .container #header .hamburger {
@@ -209,7 +206,8 @@ body {
         .container #header .hero.hero h1 {
           font-size: 1.8em; } }
   .container #main {
-    grid-area: main; }
+    grid-area: main;
+    margin: 20vh 0 10vh; }
     .container #main #about {
       margin: 0vh 0 15vh;
       height: 100vh;
@@ -245,7 +243,7 @@ body {
           font-size: 1.5em; } }
       @media (max-width: 768px) {
             .container #main #about#about article p {
-              padding: 1em .5em; } }
+              padding: 1em 1.5em; } }
       @media (max-width: 768px) and (max-width: 320px) {
         .container #main #about#about article p {
           font-size: 1em; } }
