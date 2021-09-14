@@ -14,27 +14,31 @@ body {
 .container {
     width: 100%;
     overflow: hidden;
+    // desktop grid layout 
     display: grid;
-    grid-template-rows: 85vh auto auto;
+    grid-template-rows: 90vh auto auto;
     grid-template-columns: 10vw 80vw 10vw;
     grid-template-areas: "header header header"
                         ". main ."
                         "footer footer footer";
-    @media (max-width: 768px){
+    // end of desktop grid layout 
+    // mobile grid layout
+    @media (max-width: 1024px){
         grid-template-rows: 80vh auto auto;
         grid-template-columns: 100%;
         grid-template-areas: "header"
                                 "main"
                                 "footer";
     }
+    // end of mobile grid layout
+
 // header
     #header {
         grid-area: header;
         background-image: url(../images/desktop/image-hero.jpg);
-        // background-position: bottom;
+        background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        // background-position: top center;
         position: relative;
         &::before {
             position: absolute;
@@ -102,7 +106,7 @@ body {
 
         }
         // end of hamburger menu
-
+        // navbar
         .navbar {
             // background: rgb(107, 2, 107);
             display: flex;
@@ -114,9 +118,9 @@ body {
             z-index: 10;
             // navbar fixed on mobile
             @media (max-width: 768px) {
+                padding: 5vh 5vw;
                 // position: fixed;
                 // background: rgb(37, 1, 37);
-                padding: 5vh 5vw;
             }
             // end of navbar fixed on mobile
             .logo {
@@ -251,10 +255,10 @@ body {
                 }
             }
         }
-
+        // end of navbar
+        // hero 
         .hero {
             border: 2px solid white;
-            width: 45%;
             padding: 3em;
             border-radius: 2px;
             backdrop-filter: blur(2px);
@@ -268,12 +272,13 @@ body {
                 letter-spacing: .1em;
                 line-height: 1.2;
             }
-            @media (min-width: 1024px){
+            @media (min-width: 1440px){
                 position: relative;
-                top: 12vh;
-                left: 12vw;
+                top: 10vh;
+                left: 10vw;
+                width: 45%;
             }
-            @media (max-width: 768px) {
+            @media (max-width: 1024px) {
                 display: grid;
                 place-items: center;
                 width: auto;
@@ -310,7 +315,7 @@ body {
             @media (max-width: 330px) {
                 display: none;
             }
-            @media (max-width: 768px){
+            @media (max-width: 1024px){
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -369,7 +374,7 @@ body {
                     font-weight: 500;
                 }
             }
-            @media (min-width: 1024px) {
+            @media (min-width: 1440px) {
                 margin: 0 0 10vh;
                 height: 65vh;
                 // background-color: blue;
@@ -410,10 +415,10 @@ body {
         }
 
         // VR image media query
-        @media (min-width: 769px){
+        @media (min-width: 1025px){
             .mobile-img {display: none;}
         }
-        @media (max-width: 768px){
+        @media (max-width: 1024px){
             .desktop-img {display: none;}
             .mobile-img {
                 overflow: hidden;
@@ -434,10 +439,10 @@ body {
             }
         }
         // end of VR image media query
-
         .main-bottom {
             position: relative;
-            padding: 5vh 0;
+            padding: 5vh 0 0;
+            margin: 20vh 0 5vh;
             // desktop media query
             @media (min-width: 1024px){
                 .mobile-gallery {display: none;}
