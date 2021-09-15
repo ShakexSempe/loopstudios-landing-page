@@ -241,8 +241,7 @@ body {
           letter-spacing: .05em; }
         .container #main #about article p {
           font-family: "Alata", sans-serif;
-          color: #8c8c8c;
-          font-weight: 500; }
+          color: dimgray; }
       @media (max-width: 330px) {
         .container #main #about {
           display: none; } }
@@ -355,7 +354,7 @@ body {
         font-size: 2em;
         text-transform: uppercase;
         font-family: "Josefin Sans", sans-serif;
-        font-weight: 500; }
+        font-weight: 600; }
       .container #main .main-bottom figure {
         position: relative;
         transition: .3s;
