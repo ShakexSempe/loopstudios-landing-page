@@ -200,7 +200,7 @@ body {
       @media (min-width: 1440px) {
         .container #header .hero {
           position: relative;
-          top: 10vh;
+          top: 14vh;
           left: 10vw;
           width: 45%; } }
       @media (max-width: 1024px) {
