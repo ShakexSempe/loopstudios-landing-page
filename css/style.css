@@ -81,6 +81,9 @@ body {
         opacity: 0; }
       .container #header .hamburger.active::after {
         opacity: 1; }
+      .container #header .hamburger:active {
+        transition: .2s;
+        transform: scale(0.5); }
     .container #header .navbar {
       display: flex;
       justify-content: space-between;

@@ -104,7 +104,10 @@ body {
             }
             // end of open - close transition
             // end of hamburger logo and close logo
-
+            &:active {
+                transition: .2s;
+                transform: scale(.5);
+            }
         }
         // end of hamburger menu
         // navbar
