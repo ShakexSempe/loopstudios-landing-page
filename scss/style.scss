@@ -309,7 +309,10 @@ body {
 // main
     #main {
         grid-area: main;
-        margin: 20vh 0 10vh;
+        margin: 15vh 0 10vh;
+        @media (max-width: 1024px) {
+            margin: 10vh 0 5vh;
+        }
         // about img and p
         #about {
             margin: 0vh 0 15vh;
@@ -641,7 +644,7 @@ body {
                         border-radius: 3px;
                         
                         figcaption {
-                            font-size: 1.8em;
+                            font-size: 1.5em;
                             bottom: .5em;
                             left: .5em;
                             line-height: 1.1;

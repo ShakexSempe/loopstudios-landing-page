@@ -220,7 +220,10 @@ body {
           font-size: 1.8em; } }
   .container #main {
     grid-area: main;
-    margin: 20vh 0 10vh; }
+    margin: 15vh 0 10vh; }
+    @media (max-width: 1024px) {
+      .container #main {
+        margin: 10vh 0 5vh; } }
     .container #main #about {
       margin: 0vh 0 15vh;
       height: 100vh;
@@ -459,7 +462,7 @@ body {
             .container #main .main-bottom .mobile-gallery figure {
               border-radius: 3px; }
               .container #main .main-bottom .mobile-gallery figure figcaption {
-                font-size: 1.8em;
+                font-size: 1.5em;
                 bottom: .5em;
                 left: .5em;
                 line-height: 1.1;
