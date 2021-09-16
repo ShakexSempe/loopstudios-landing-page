@@ -24,8 +24,8 @@ body {
   .container #header {
     grid-area: header;
     background-image: url(../images/desktop/image-hero.jpg);
-    background-position: center top;
-    background-size: contain;
+    background-position: center left;
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative; }
@@ -45,7 +45,7 @@ body {
       z-index: 6;
       cursor: pointer;
       display: block; }
-      @media (min-width: 1024px) {
+      @media (min-width: 1025px) {
         .container #header .hamburger {
           display: none; } }
       .container #header .hamburger::before {
@@ -86,7 +86,7 @@ body {
       top: 0;
       width: 100vw;
       z-index: 10; }
-      @media (max-width: 768px) {
+      @media (max-width: 1024px) {
         .container #header .navbar {
           padding: 5vh 5vw; } }
       .container #header .navbar .logo {
@@ -103,7 +103,7 @@ body {
         left: 100%;
         transition: .5s;
         z-index: 5; }
-        @media (min-width: 1024px) {
+        @media (min-width: 1025px) {
           .container #header .navbar .mobile-list {
             display: none; } }
         .container #header .navbar .mobile-list .mobile-nav-list {
@@ -130,7 +130,7 @@ body {
         align-items: center;
         padding: 1em 0;
         position: relative; }
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
           .container #header .navbar .nav-list {
             display: none; } }
         .container #header .navbar .nav-list::before {
@@ -197,13 +197,10 @@ body {
           top: 10vh;
           left: 10vw;
           width: 46%; } }
-      @media (max-width: 1024px) {
+      @media (max-width: 1440px) {
         .container #header .hero {
-          display: grid;
-          place-items: center;
-          width: auto;
-          position: relative;
-          top: 37%;
+          position: absolute;
+          top: 45%;
           transform: translateY(-50%);
           margin: 1.5em 5vw;
           padding: 1.5em 1em; }
@@ -472,7 +469,7 @@ body {
     margin: 0;
     font-family: "Josefin Sans", sans-serif;
     text-transform: capitalize; }
-    @media (max-width: 1024px) {
+    @media (max-width: 768px) {
       .container #footer {
         flex-direction: column;
         justify-content: center;
@@ -552,7 +549,7 @@ body {
             .container #footer .social-links p a:hover::before {
               opacity: 1;
               transform: translateY(0) translateX(-50%); } }
-    @media (min-width: 1440px) {
+    @media (min-width: 1024px) {
       .container #footer {
         color: white;
         padding: 5vh 10vw; }
