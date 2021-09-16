@@ -126,12 +126,30 @@ body {
             padding: 1em 0; }
             .container #header .navbar .mobile-list .mobile-nav-list li a {
               font-family: "Josefin Sans", sans-serif;
-              color: #8c8c8c;
+              color: white;
+              opacity: .4;
               font-size: 1.5em;
               font-weight: 500;
               letter-spacing: .1em;
               text-transform: uppercase;
-              text-decoration: none; }
+              text-decoration: none;
+              transition: .3s; }
+              .container #header .navbar .mobile-list .mobile-nav-list li a::after {
+                content: attr(data-link);
+                position: absolute;
+                top: -10vh;
+                left: 50vw;
+                color: dimgray;
+                transform: translateX(-50%);
+                opacity: 0;
+                font-size: 2em;
+                letter-spacing: 1em;
+                transition: .3s ease; }
+              .container #header .navbar .mobile-list .mobile-nav-list li a:hover {
+                opacity: 1; }
+                .container #header .navbar .mobile-list .mobile-nav-list li a:hover::after {
+                  opacity: .4;
+                  letter-spacing: 0; }
         .container #header .navbar .mobile-list.active {
           left: 0%; }
       .container #header .navbar .nav-list {
