@@ -3,7 +3,7 @@
 // hamburger menu toggle
 // select hamburger icon and navlist to be displayed
 const hamburger = document.querySelector('.hamburger');
-const navList = document.querySelector('#header .navbar .mobile-list');
+const navList = document.querySelector('#header .navbar .mobile-nav');
 const navItem = document.querySelectorAll('#header .navbar .mobile-list li a');
 console.log(navItem);
 // add event lister to toggle active class on hamburger on click

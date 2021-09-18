@@ -140,7 +140,7 @@ body {
             }
             // mobile nav style
             // hide mobile nav on desktops
-            .mobile-list {
+            .mobile-nav {
                 @media (min-width: 1025px){
                     display: none
                 }
