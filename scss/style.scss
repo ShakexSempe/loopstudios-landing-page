@@ -41,6 +41,18 @@ body {
         background-repeat: no-repeat;
         background-attachment: fixed;
         position: relative;
+        // hero background overlay
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100%;
+            min-height: 80%;
+            background-color: rgba(0, 0, 0, 0.205);
+        }
+        // end of hero background overlay
+
         @media (max-width: 1024px) {
             background-image: url(../images/mobile/image-hero.jpg);
             background-position: top left;
@@ -342,7 +354,7 @@ body {
 // main
     #main {
         grid-area: main;
-        margin: 10vh 0 10vh;
+        margin: 0vh 0 10vh;
         @media (max-width: 1024px) {
             margin: 10vh 0 5vh;
         }

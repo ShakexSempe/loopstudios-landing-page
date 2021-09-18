@@ -29,6 +29,14 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative; }
+    .container #header::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 80%;
+      background-color: rgba(0, 0, 0, 0.205); }
     @media (max-width: 1024px) {
       .container #header {
         background-image: url(../images/mobile/image-hero.jpg);
@@ -254,7 +262,7 @@ body {
           font-size: 1.8em; } }
   .container #main {
     grid-area: main;
-    margin: 10vh 0 10vh; }
+    margin: 0vh 0 10vh; }
     @media (max-width: 1024px) {
       .container #main {
         margin: 10vh 0 5vh; } }
