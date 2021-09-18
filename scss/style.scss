@@ -342,7 +342,7 @@ body {
 // main
     #main {
         grid-area: main;
-        margin: 15vh 0 10vh;
+        margin: 10vh 0 10vh;
         @media (max-width: 1024px) {
             margin: 10vh 0 5vh;
         }
@@ -416,7 +416,7 @@ body {
             // desktop about section
             @media (min-width: 1440px) {
                 margin: 0 0 10vh;
-                height: 65vh;
+                height: 60vh;
                 .desktop-img {
                     height: 100%;
                     width: 65%;

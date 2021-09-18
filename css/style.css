@@ -254,7 +254,7 @@ body {
           font-size: 1.8em; } }
   .container #main {
     grid-area: main;
-    margin: 15vh 0 10vh; }
+    margin: 10vh 0 10vh; }
     @media (max-width: 1024px) {
       .container #main {
         margin: 10vh 0 5vh; } }
@@ -316,7 +316,7 @@ body {
       @media (min-width: 1440px) {
         .container #main #about {
           margin: 0 0 10vh;
-          height: 65vh; }
+          height: 60vh; }
           .container #main #about .desktop-img {
             height: 100%;
             width: 65%;
