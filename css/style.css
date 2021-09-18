@@ -13,7 +13,7 @@ body {
   width: 100%;
   overflow: hidden;
   display: grid;
-  grid-template-rows: 100vh auto auto;
+  grid-template-rows: 90vh auto auto;
   grid-template-columns: 10vw 80vw 10vw;
   grid-template-areas: "header header header" ". main ." "footer footer footer"; }
   @media (max-width: 1024px) {
@@ -35,7 +35,7 @@ body {
       top: 0;
       left: 0;
       width: 100%;
-      min-height: 80%;
+      min-height: 89%;
       background-color: rgba(0, 0, 0, 0.205); }
     @media (max-width: 1024px) {
       .container #header {

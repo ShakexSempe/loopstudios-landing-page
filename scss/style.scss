@@ -16,7 +16,7 @@ body {
     overflow: hidden;
     // desktop grid layout 
     display: grid;
-    grid-template-rows: 100vh auto auto;
+    grid-template-rows: 90vh auto auto;
     grid-template-columns: 10vw 80vw 10vw;
     grid-template-areas: "header header header"
                         ". main ."
@@ -48,7 +48,7 @@ body {
             top: 0;
             left: 0;
             width: 100%;
-            min-height: 80%;
+            min-height: 89%;
             background-color: rgba(0, 0, 0, 0.205);
         }
         // end of hero background overlay
