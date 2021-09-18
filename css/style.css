@@ -279,12 +279,13 @@ body {
         bottom: 0;
         background-color: white;
         padding: 4em 0 0 4em; }
-        .container #main #about article h1 {
+        .container #main #about article .title {
           font-family: "Josefin Sans", sans-serif;
           text-transform: uppercase;
-          font-size: 3em;
+          font-size: 2em;
+          font-weight: 500;
           letter-spacing: .05em; }
-        .container #main #about article p {
+        .container #main #about article .content {
           font-family: "Alata", sans-serif;
           color: dimgray; }
       @media (max-width: 330px) {
@@ -309,17 +310,17 @@ body {
       .container #main #about#about article {
         padding: 1em 0em; } }
       @media (max-width: 1024px) {
-            .container #main #about#about article h1 {
+            .container #main #about#about article .title {
               font-size: 2em;
               padding: 0 .1em; } }
       @media (max-width: 1024px) and (max-width: 320px) {
-        .container #main #about#about article h1 {
+        .container #main #about#about article .title {
           font-size: 1.5em; } }
       @media (max-width: 1024px) {
-            .container #main #about#about article p {
+            .container #main #about#about article .content {
               padding: 1em 1.5em; } }
       @media (max-width: 1024px) and (max-width: 320px) {
-        .container #main #about#about article p {
+        .container #main #about#about article .content {
           font-size: 1em; } }
       @media (min-width: 1440px) {
         .container #main #about {
@@ -340,11 +341,11 @@ body {
             .container #main #about article .about-container {
               position: absolute;
               bottom: 0; }
-              .container #main #about article .about-container h1 {
+              .container #main #about article .about-container .title {
                 font-size: 3em;
                 margin-bottom: .5em;
                 line-height: 1.3; }
-              .container #main #about article .about-container p {
+              .container #main #about article .about-container .content {
                 line-height: 1.8; } }
     @media (min-width: 1025px) {
       .container #main .mobile-img {
@@ -395,7 +396,7 @@ body {
           letter-spacing: .1em;
           transition: .2s;
           transform: scale(0.95); }
-      .container #main .main-bottom .main-header h1 {
+      .container #main .main-bottom .main-header p {
         font-size: 2em;
         text-transform: uppercase;
         font-family: "Josefin Sans", sans-serif;

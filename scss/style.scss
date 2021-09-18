@@ -374,13 +374,14 @@ body {
                 background-color: $white;
                 padding: 4em 0 0 4em;
 
-                h1 {
+                .title {
                     font-family: $font-josefin;
                     text-transform: uppercase;
-                    font-size: 3em;
+                    font-size: 2em;
+                    font-weight: 500;
                     letter-spacing: .05em;
                 }
-                p {
+                .content {
                     font-family: $font-alata;
                     color: $very-dark-grey;
                 }
@@ -409,14 +410,14 @@ body {
                     @media (max-width: 320px) {
                         padding: 1em 0em;
                     }
-                    h1 {
+                    .title {
                         font-size: 2em;
                         padding: 0 .1em;
                         @media (max-width: 320px) {
                             font-size: 1.5em;
                         }
                     }
-                    p {
+                    .content {
                         padding: 1em 1.5em;
                         @media (max-width: 320px) {
                             font-size: 1em;
@@ -448,12 +449,12 @@ body {
                     .about-container {
                         position: absolute;
                         bottom: 0;
-                        h1 {
+                        .title {
                             font-size: 3em;
                             margin-bottom: .5em;
                             line-height: 1.3;
                         }
-                        p {
+                        .content {
                             line-height: 1.8;
                         }
                     }
@@ -532,7 +533,7 @@ body {
             }
             // see all button
             .main-header {
-                h1 {
+                p {
                     font-size: 2em;
                     text-transform: uppercase;
                     font-family: $font-josefin;
