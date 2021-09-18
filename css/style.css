@@ -603,7 +603,7 @@ body {
     @media (min-width: 1024px) {
       .container #footer {
         color: white;
-        padding: 5vh 10vw; }
+        padding: 2vh 10vw; }
         .container #footer .footer-logo {
           margin-bottom: 1em; }
         .container #footer .brand-links {
