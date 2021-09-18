@@ -472,7 +472,7 @@ body {
           left: 0;
           font-size: 1.5em; }
         .container #main .main-bottom .desktop-gallery {
-          margin: 15vh 0;
+          margin: 10vh 0;
           display: grid;
           gap: 1em;
           grid-template-columns: 1fr 1fr 1fr 1fr; }
