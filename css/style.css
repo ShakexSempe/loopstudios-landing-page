@@ -372,14 +372,28 @@ body {
       .container #main .main-bottom button {
         font-family: "Alata", sans-serif;
         font-weight: 600;
-        border-radius: 4px;
         text-transform: uppercase;
         letter-spacing: .3em;
         transition: .2s ease;
         cursor: pointer;
-        border: 1px solid #000;
         background-color: transparent;
-        outline: none; }
+        border: none;
+        outline: none;
+        border-radius: 2px;
+        z-index: 1; }
+        .container #main .main-bottom button::before {
+          position: absolute;
+          content: '';
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: white;
+          border: 1px solid #000;
+          outline: none;
+          border-radius: 2px;
+          z-index: -1;
+          transition: .5s ease; }
         .container #main .main-bottom button::after {
           position: absolute;
           content: '';
@@ -388,7 +402,7 @@ body {
           width: 100%;
           height: 100%;
           background-color: black;
-          border: none;
+          border: 1px solid #000;
           outline: none;
           border-radius: 2px;
           opacity: 0;
@@ -471,7 +485,7 @@ body {
           right: 0;
           top: 0;
           letter-spacing: .3em;
-          padding: 1em 3em; }
+          padding: .8em 3em; }
         .container #main .main-bottom .main-header {
           position: absolute;
           top: 0;
