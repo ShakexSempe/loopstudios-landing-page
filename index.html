@@ -10,6 +10,7 @@
 
 </head>
 <body>
+  
   <div class="container">
     <!-- header -->
     <header id="header">
@@ -35,11 +36,11 @@
         <!-- links -->
         <div class="mobile-nav">
         <ul class="mobile-nav-list">
-            <li><a href="#" data-link="about">about</a></li>
-            <li><a href="#" data-link="careers">careers</a></li>
-            <li><a href="#" data-link="events">events</a></li>
-            <li><a href="#" data-link="products">products</a></li>
-            <li><a href="#" data-link="support">support</a></li>
+            <li><a href="#" target="_blank" data-link="about">about</a></li>
+            <li><a href="#" target="_blank" data-link="careers">careers</a></li>
+            <li><a href="#" target="_blank" data-link="events">events</a></li>
+            <li><a href="#" target="_blank" data-link="products">products</a></li>
+            <li><a href="#" target="_blank" data-link="support">support</a></li>
           </ul>
         </div>
         <!-- end of links -->
@@ -49,8 +50,17 @@
       </nav>
       <!-- end of navbar -->
       
+      <picture class="hero-image">
+        <source
+        srcset="images/desktop-hero.jpg"
+        media="(min-width: 768px)"
+        width="1440"
+          height="650"
+        >
+        <img src="images/mobile-hero.jpg" width="750" height="1300" alt="">
+      </picture>
       <!-- hero h1 -->
-      <div class="hero">
+      <div class="title">
         <h1>
           Immersive experiences that deliver
         </h1>
