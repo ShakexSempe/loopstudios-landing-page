@@ -73,12 +73,16 @@
       <!-- about -->
       <div id="about">
         <!-- image -->
-        <figure class="desktop-img">
-          <img src="images/desktop/image-interactive.jpg" alt="img">
-        </figure>
-        <figure class="mobile-img">
-          <img src="images/mobile/image-interactive.jpg" alt="img">
-        </figure>
+        <picture>
+          <source
+          media="(min-width: 768px)"
+          srcset="images/desktop/image-interactive.jpg"
+          width="731"
+          height="500"
+          >
+          <img src="images/mobile/image-interactive.jpg" width="654" height="448" alt="img">
+
+        </picture>
         <!-- end of image -->
         <!-- description -->
         <article>
