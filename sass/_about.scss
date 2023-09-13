@@ -8,8 +8,8 @@
         margin-inline: auto;
     }
 
+    // IMAGE - SMALL SCREENS = MARGIN BOTTOM AND INLINE AUTO
     img {
-        height: 100%;
         margin: 0 auto 2rem;
         @media (min-width: 1024px){
             margin: 0;
@@ -24,38 +24,25 @@
         padding: 0 1.5rem;
         // DESKTOP ARTICLE
         @media (min-width: 1024px) {
-            text-align: left;
             position: absolute;
             right: 0;
             width: 49%;
-            height: 60%;
+            height: 65%;
             bottom: 0;
             background-color: variables.$white;
-            padding: 4em 0 0 4em;
+            text-align: left;
             padding: 0 6rem;
             margin: 0;
         }
-
-        .content {
-            // border: 2px solid red;
-            // padding: 1em 2rem;
-            // @media (min-width: 820px){
-            //     padding: 0 2rem 0 1rem;
-            // }
-
-            // @media (max-width: 320px) {
-            //     font-size: 1em;
-            // }
-        }
-
-        
 
         .title {
             font-family: variables.$font-josefin;
             text-transform: uppercase;
             font-size: 2rem;
+            font-size: clamp(2rem, 3vw, 2.5rem);
             font-weight: 400;
             letter-spacing: .05em;
+            line-height: 1.1;
             margin-bottom: 1rem;
         }
 
@@ -73,7 +60,4 @@
             }
         }
     }
-    // end of small screen
-    
-    // end of desktop about section
 }

@@ -9,7 +9,6 @@
   }
 }
 #about img {
-  height: 100%;
   margin: 0 auto 2rem;
 }
 @media (min-width: 1024px) {
@@ -26,14 +25,13 @@
 }
 @media (min-width: 1024px) {
   #about article {
-    text-align: left;
     position: absolute;
     right: 0;
     width: 49%;
-    height: 60%;
+    height: 65%;
     bottom: 0;
     background-color: white;
-    padding: 4em 0 0 4em;
+    text-align: left;
     padding: 0 6rem;
     margin: 0;
   }
@@ -42,8 +40,10 @@
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
   font-size: 2rem;
+  font-size: clamp(2rem, 3vw, 2.5rem);
   font-weight: 400;
   letter-spacing: 0.05em;
+  line-height: 1.1;
   margin-bottom: 1rem;
 }
 #about article .content {
