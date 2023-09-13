@@ -18,11 +18,12 @@
   }
 }
 #about article {
+  border: 2px solid blue;
   position: relative;
   width: 100%;
   text-align: center;
   margin: 2rem 0;
-  padding: 0 2rem;
+  padding: 0 1.5rem;
 }
 @media (min-width: 1024px) {
   #about article {
