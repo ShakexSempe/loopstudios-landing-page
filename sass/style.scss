@@ -256,10 +256,9 @@ img {
             // general gallery style
             figure {
                 position: relative;
-                transition: .3s;
-                cursor: pointer;
+                transition: .25s;
                 overflow: hidden;
-                border-radius: 3px;
+                border-radius: 2px;
                 img {
                     width: 100%;
                     height: 100%;
@@ -271,7 +270,7 @@ img {
                     font-weight: 500;
                     text-transform: uppercase;
                     letter-spacing: .05em;
-                    transition: .5s;
+                    transition: .25s;
                     line-height: 1.1;
                     z-index: 4;
                     // 'the grid' 
@@ -281,7 +280,7 @@ img {
                     }
                     // end of 'the grid' 
                 }
-                // contrast overlay
+                // CONTRAST OVERLAY
                 &::before {
                     position: absolute;
                     content: '';
@@ -396,7 +395,6 @@ img {
                     display: grid;
                     gap: 2em;
                     figure {
-                        border-radius: 3px;
                         
                         figcaption {
                             font-size: 1.5em;

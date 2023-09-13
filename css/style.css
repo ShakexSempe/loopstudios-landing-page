@@ -472,10 +472,9 @@ img {
 }
 #main .main-bottom figure {
   position: relative;
-  transition: 0.3s;
-  cursor: pointer;
+  transition: 0.25s;
   overflow: hidden;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 #main .main-bottom figure img {
   width: 100%;
@@ -488,7 +487,7 @@ img {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  transition: 0.5s;
+  transition: 0.25s;
   line-height: 1.1;
   z-index: 4;
 }
@@ -594,9 +593,6 @@ img {
   #main .main-bottom .mobile-gallery {
     display: grid;
     gap: 2em;
-  }
-  #main .main-bottom .mobile-gallery figure {
-    border-radius: 3px;
   }
   #main .main-bottom .mobile-gallery figure figcaption {
     font-size: 1.5em;
