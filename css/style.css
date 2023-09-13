@@ -201,31 +201,31 @@
   text-transform: uppercase;
   color: white;
   font-size: 1rem;
-  font-size: clamp(2.5rem, 4vw, 3rem);
-  text-wrap: balance;
+  font-size: clamp(2.5rem, 4.5vw, 3.5rem);
   font-weight: 100;
-  letter-spacing: 0.1em;
+  letter-spacing: 2px;
   line-height: 1.2;
   transition: 1s;
 }
 @media (min-width: 1024px) {
   #header .title {
     position: relative;
-    top: 11vh;
+    top: 15vh;
     left: 10vw;
-    width: 46%;
+    width: 45%;
     padding: 2em 3em;
   }
 }
 @media (max-width: 1200px) {
   #header .title {
     position: absolute;
-    top: 45%;
+    top: 50%;
     transform: translateY(-50%);
     margin: 1.5em 5vw;
-    padding: 1.5em 1em;
+    padding: 1.5rem 2rem;
   }
 }
+
 * {
   padding: 0;
   margin: 0;
