@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
 #about {
   position: relative;
-  margin: 0 5vw 10vh;
+  margin: 0 5vw 5vh;
 }
 @media (min-width: 1024px) {
   #about {
@@ -29,7 +29,7 @@
     text-align: left;
     position: absolute;
     right: 0;
-    width: 48%;
+    width: 49%;
     height: 60%;
     bottom: 0;
     background-color: white;

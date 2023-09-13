@@ -2,17 +2,15 @@
 
 #about {
     position: relative;
-    margin: 0 5vw 10vh;
+    margin: 0 5vw 5vh;
     // DESKTOP ABOUT SECTION
     @media (min-width: 1024px) {
         margin-inline: auto;
     }
 
-
     img {
         height: 100%;
         margin: 0 auto 2rem;
-        // margin-bottom: 2rem;
         @media (min-width: 1024px){
             margin: 0;
         }
@@ -29,7 +27,7 @@
             text-align: left;
             position: absolute;
             right: 0;
-            width: 48%;
+            width: 49%;
             height: 60%;
             bottom: 0;
             background-color: variables.$white;
