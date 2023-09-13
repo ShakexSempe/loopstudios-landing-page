@@ -10,6 +10,7 @@
 
     // IMAGE - SMALL SCREENS = MARGIN BOTTOM AND INLINE AUTO
     img {
+        height: 100%;
         margin: 0 auto 2rem;
         @media (min-width: 1024px){
             margin: 0;
