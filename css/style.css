@@ -727,6 +727,7 @@ img {
     display: flex;
     justify-content: flex-end;
     color: #8c8c8c;
+    line-height: 1.2;
     margin-bottom: 0.3em;
   }
   #footer .social-links p a {
