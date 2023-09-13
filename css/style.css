@@ -253,35 +253,29 @@
 #header .title {
   border: 1px solid #fff;
   padding: 1rem;
+  border-radius: 2px;
   position: relative;
+  top: 20vh;
+  margin: 1.5em 5vw;
+  padding: 1.5rem 2rem;
 }
 #header .title h1 {
   font-family: "Josefin Sans", sans-serif;
   text-transform: uppercase;
   color: white;
-  font-size: 1rem;
-  font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+  font-size: 2rem;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 100;
   letter-spacing: 2px;
-  line-height: 1.2;
+  line-height: 1.1;
   transition: 1s;
 }
 @media (min-width: 1024px) {
   #header .title {
-    position: relative;
-    top: 15vh;
-    left: 10vw;
+    top: 12vh;
+    left: 5vw;
     width: 45%;
-    padding: 2em 3em;
-  }
-}
-@media (max-width: 1200px) {
-  #header .title {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin: 1.5em 5vw;
-    padding: 1.5rem 2rem;
+    padding: 4rem;
   }
 }
 

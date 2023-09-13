@@ -246,37 +246,29 @@
     .title {
         border: 1px solid #fff;
         padding: 1rem;
-        // backdrop-filter: blur(2px);
-        // -webkit-backdrop-filter: blur(2px);
+        border-radius: 2px;
         position: relative;
+        top: 20vh;
+        margin: 1.5em 5vw;
+        padding: 1.5rem 2rem;
 
-        // end of hero hover shadow effect
         h1 {
             font-family: variables.$font-josefin;
             text-transform: uppercase;
             color: variables.$white;
-            font-size: 1rem;
-            font-size: clamp(2.5rem, 4.5vw, 3.5rem);
+            font-size: 2rem;
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
             font-weight: 100;
             letter-spacing: 2px;
-            line-height: 1.2;
+            line-height: 1.1;
             transition: 1s;
         }
 
         @media (min-width: 1024px) {
-            position: relative;
-            top: 15vh;
-            left: 10vw;
+            top: 12vh;
+            left: 5vw;
             width: 45%;
-            padding: 2em 3em;
-        }
-
-        @media (max-width: 1200px) {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            margin: 1.5em 5vw;
-            padding: 1.5rem 2rem;
+            padding: 4rem;
         }
 
     }
