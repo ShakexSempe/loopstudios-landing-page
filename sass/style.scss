@@ -88,6 +88,10 @@ img {
             margin: 20vh 0 5vh;
             // see all button
             button {
+                display: block;
+                margin: 2rem auto 0;
+                padding: 1rem;
+                position: relative;
                 font-family: variables.$font-alata;
                 font-weight: 600;
                 text-transform: uppercase;
@@ -98,6 +102,15 @@ img {
                 border-radius: 2px;
                 z-index: 1;
                 transition: .25s ease;
+
+                @media (min-width: 1024px) {
+                    position: absolute;
+                    right: 0;
+                    top: -2rem;
+                    letter-spacing: .3em;
+                    padding: .8em 3em;
+                    width: 20%;
+                }
                 // button hover and active state
                 &::before, &::after {
                     position: absolute;
@@ -134,7 +147,7 @@ img {
                     font-size: 2em;
                     text-transform: uppercase;
                     font-family: variables.$font-josefin;
-                    font-weight: 600;
+                    font-weight: 400;
                 }
             }
             // general gallery style
@@ -221,13 +234,6 @@ img {
             // desktop media query
             @media (min-width: 1024px){
                 .mobile-gallery {display: none;}
-                button {
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    letter-spacing: .3em;
-                    padding: .8em 3em;
-                }
                 .main-header {
                     position: absolute;
                     top: 0;
@@ -263,12 +269,7 @@ img {
                 margin: 0 0 10vh;
                 padding: 0 5vw;
                 .desktop-gallery {display: none;}
-                button {
-                    display: block;
-                    margin: 2em auto;
-                    padding: 1em 3em;
-                    position: relative;
-                }
+                
                 .main-header {
                     position: relative;
                     font-size: 1em;

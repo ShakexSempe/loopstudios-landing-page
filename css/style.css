@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
 #about {
   position: relative;
-  overflow: hidden;
 }
 #about article {
   position: absolute;
@@ -414,6 +413,10 @@ img {
   margin: 20vh 0 5vh;
 }
 #main .main-bottom button {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 1rem;
+  position: relative;
   font-family: "Alata", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
@@ -424,6 +427,16 @@ img {
   border-radius: 2px;
   z-index: 1;
   transition: 0.25s ease;
+}
+@media (min-width: 1024px) {
+  #main .main-bottom button {
+    position: absolute;
+    right: 0;
+    top: -2rem;
+    letter-spacing: 0.3em;
+    padding: 0.8em 3em;
+    width: 20%;
+  }
 }
 #main .main-bottom button::before, #main .main-bottom button::after {
   position: absolute;
@@ -455,7 +468,7 @@ img {
   font-size: 2em;
   text-transform: uppercase;
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
 }
 #main .main-bottom figure {
   position: relative;
@@ -528,13 +541,6 @@ img {
   #main .main-bottom .mobile-gallery {
     display: none;
   }
-  #main .main-bottom button {
-    position: absolute;
-    right: 0;
-    top: 0;
-    letter-spacing: 0.3em;
-    padding: 0.8em 3em;
-  }
   #main .main-bottom .main-header {
     position: absolute;
     top: 0;
@@ -564,12 +570,6 @@ img {
   }
   #main .main-bottom .desktop-gallery {
     display: none;
-  }
-  #main .main-bottom button {
-    display: block;
-    margin: 2em auto;
-    padding: 1em 3em;
-    position: relative;
   }
   #main .main-bottom .main-header {
     position: relative;
