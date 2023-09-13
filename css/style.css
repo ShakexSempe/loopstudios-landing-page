@@ -361,6 +361,8 @@ img {
   #main #about .desktop-img img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
+    border: 2px solid red;
   }
   #main #about article {
     height: 60%;
