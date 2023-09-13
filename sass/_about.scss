@@ -1,0 +1,106 @@
+@use './variables';
+
+// about img and p
+#about {
+    position: relative;
+    overflow: hidden;
+    // interactive vr article
+    article {
+        position: absolute;
+        right: 0;
+        width: 50%;
+        height: 50%;
+        bottom: 0;
+        background-color: variables.$white;
+        padding: 4em 0 0 4em;
+
+        .title {
+            font-family: variables.$font-josefin;
+            text-transform: uppercase;
+            font-size: 2em;
+            font-weight: 500;
+            letter-spacing: .05em;
+        }
+        .content {
+            font-family: variables.$font-alata;
+            color: variables.$very-dark-grey;
+            line-height: 1.8;
+        }
+    }
+    // end of interactive vr article
+
+    // small screen
+    @media (max-width: 330px) {
+        display: none;
+    }
+    @media (max-width: 1024px){
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+        margin: 0 5vw 10vh;
+        &#about .mobile-img {
+            position: relative;
+        }
+        &#about article {
+            position: relative;
+            width: 100%;
+            height: auto;
+            text-align: center;
+            padding: 1em 0em;
+            @media (max-width: 320px) {
+                padding: 1em 0em;
+            }
+            .title {
+                font-size: 2em;
+                padding: 0 .1em;
+                @media (max-width: 320px) {
+                    font-size: 1.5em;
+                }
+            }
+            .content {
+                padding: 1em 1.5em;
+                @media (max-width: 320px) {
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+    // end of small screen
+    // desktop about section
+    @media (min-width: 1440px) {
+        margin: 0 0 10vh;
+        height: 60vh;
+        .desktop-img {
+            height: 100%;
+            width: 65%;
+            position: absolute;
+            bottom: 0;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+
+            }
+        }
+        article {
+            height: 60%;
+            padding: 2em 9vw;
+            .about-container {
+                position: absolute;
+                bottom: 0;
+                .title {
+                    font-size: 3em;
+                    margin-bottom: .5em;
+                    line-height: 1.3;
+                }
+                .content {
+                    line-height: 1.8;
+                }
+            }
+        }
+    }
+    // end of desktop about section
+}

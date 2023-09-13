@@ -1,4 +1,114 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+#about {
+  position: relative;
+  overflow: hidden;
+}
+#about article {
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  bottom: 0;
+  background-color: white;
+  padding: 4em 0 0 4em;
+}
+#about article .title {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+#about article .content {
+  font-family: "Alata", sans-serif;
+  color: dimgray;
+  line-height: 1.8;
+}
+@media (max-width: 330px) {
+  #about {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  #about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    margin: 0 5vw 10vh;
+  }
+  #about#about .mobile-img {
+    position: relative;
+  }
+  #about#about article {
+    position: relative;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 1em 0em;
+  }
+}
+@media (max-width: 1024px) and (max-width: 320px) {
+  #about#about article {
+    padding: 1em 0em;
+  }
+}
+@media (max-width: 1024px) {
+  #about#about article .title {
+    font-size: 2em;
+    padding: 0 0.1em;
+  }
+}
+@media (max-width: 1024px) and (max-width: 320px) {
+  #about#about article .title {
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 1024px) {
+  #about#about article .content {
+    padding: 1em 1.5em;
+  }
+}
+@media (max-width: 1024px) and (max-width: 320px) {
+  #about#about article .content {
+    font-size: 1em;
+  }
+}
+@media (min-width: 1440px) {
+  #about {
+    margin: 0 0 10vh;
+    height: 60vh;
+  }
+  #about .desktop-img {
+    height: 100%;
+    width: 65%;
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+  }
+  #about .desktop-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #about article {
+    height: 60%;
+    padding: 2em 9vw;
+  }
+  #about article .about-container {
+    position: absolute;
+    bottom: 0;
+  }
+  #about article .about-container .title {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    line-height: 1.3;
+  }
+  #about article .about-container .content {
+    line-height: 1.8;
+  }
+}
+
 #header {
   grid-area: header;
   position: relative;
@@ -270,114 +380,6 @@ img {
 @media (max-width: 1024px) {
   #main {
     margin: 10vh 0 5vh;
-  }
-}
-#main #about {
-  position: relative;
-  overflow: hidden;
-}
-#main #about article {
-  position: absolute;
-  right: 0;
-  width: 50%;
-  height: 50%;
-  bottom: 0;
-  background-color: white;
-  padding: 4em 0 0 4em;
-}
-#main #about article .title {
-  font-family: "Josefin Sans", sans-serif;
-  text-transform: uppercase;
-  font-size: 2em;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-}
-#main #about article .content {
-  font-family: "Alata", sans-serif;
-  color: dimgray;
-}
-@media (max-width: 330px) {
-  #main #about {
-    display: none;
-  }
-}
-@media (max-width: 1024px) {
-  #main #about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: auto;
-    margin: 0 5vw 10vh;
-  }
-  #main #about#about .mobile-img {
-    position: relative;
-  }
-  #main #about#about article {
-    position: relative;
-    width: 100%;
-    height: auto;
-    text-align: center;
-    padding: 1em 0em;
-  }
-}
-@media (max-width: 1024px) and (max-width: 320px) {
-  #main #about#about article {
-    padding: 1em 0em;
-  }
-}
-@media (max-width: 1024px) {
-  #main #about#about article .title {
-    font-size: 2em;
-    padding: 0 0.1em;
-  }
-}
-@media (max-width: 1024px) and (max-width: 320px) {
-  #main #about#about article .title {
-    font-size: 1.5em;
-  }
-}
-@media (max-width: 1024px) {
-  #main #about#about article .content {
-    padding: 1em 1.5em;
-  }
-}
-@media (max-width: 1024px) and (max-width: 320px) {
-  #main #about#about article .content {
-    font-size: 1em;
-  }
-}
-@media (min-width: 1440px) {
-  #main #about {
-    margin: 0 0 10vh;
-    height: 60vh;
-  }
-  #main #about .desktop-img {
-    height: 100%;
-    width: 65%;
-    position: absolute;
-    bottom: 0;
-    overflow: hidden;
-  }
-  #main #about .desktop-img img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-  #main #about article {
-    height: 60%;
-    padding: 2em 9vw;
-  }
-  #main #about article .about-container {
-    position: absolute;
-    bottom: 0;
-  }
-  #main #about article .about-container .title {
-    font-size: 3em;
-    margin-bottom: 0.5em;
-    line-height: 1.3;
-  }
-  #main #about article .about-container .content {
-    line-height: 1.8;
   }
 }
 @media (min-width: 1025px) {
