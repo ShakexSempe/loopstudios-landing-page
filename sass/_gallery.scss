@@ -6,215 +6,169 @@
     padding: 5vh 0 0;
     margin: 10vh 0 5vh;
 
-    // 'SEE ALL' BUTTON
-    button {
-        display: block;
-        margin: 5vh auto 0;
-        padding: .8rem 1rem;
-        position: relative;
-        font-family: variables.$font-alata;
-        font-weight: 600;
+    .gallery-title {
         text-transform: uppercase;
+        font-family: variables.$font-josefin;
+        font-weight: 400;
+        margin-bottom: 4rem;
+        font-size: 2em;
+        // MOBILE GALLERY TITLE 
+        @media (max-width: 820px) {
+            text-align: center;
+            // margin-bottom: 2rem;
+        }
+    }
+
+    .gallery-grid {
+        display: grid;
+        gap: 1rem;
+        // DESKTOP GALLERY GRID 4 COLUMNS
+        @media (min-width: 820px){
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+        }
+    }
+
+}
+// 'SEE ALL' BUTTON
+.gallery-button {
+    display: block;
+    margin: 5vh auto 0;
+    padding: .8rem 1rem;
+    position: relative;
+    font-family: variables.$font-alata;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    width: 200px;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 2px;
+    z-index: 1;
+    transition: .25s ease;
+
+    @media (min-width: 1024px) {
+        position: absolute;
+        right: 0;
+        top: -1rem;
         letter-spacing: .3em;
-        width: 50%;
-        background-color: transparent;
-        border: 1px solid #000;
+        padding: .8em 3em;
+        cursor: pointer;
+    }
+    // button hover and active state
+    &::before, &::after {
+        position: absolute;
+        content: '';
+        inset: 0;
         border-radius: 2px;
-        z-index: 1;
+        z-index: -1;
         transition: .25s ease;
-
-        @media (min-width: 1024px) {
-            position: absolute;
-            right: 0;
-            top: -5vh;
-            letter-spacing: .3em;
-            padding: .8em 3em;
-            width: 15%;
-            cursor: pointer;
-        }
-        // button hover and active state
-        &::before, &::after {
-            position: absolute;
-            content: '';
-            inset: 0;
-            border-radius: 2px;
-            z-index: -1;
-            transition: .25s ease;
-        }
-        &::before {
-            background-color: variables.$white; 
-        }
+    }
+    &::before {
+        background-color: variables.$white; 
+    }
+    &::after {
+        background-color: variables.$black;
+        opacity: 0;
+    }
+    &:hover {
+        color: variables.$white;
         &::after {
-            background-color: variables.$black;
-            opacity: 0;
-        }
-        &:hover {
-            color: variables.$white;
-            &::after {
-                opacity: 1;
-            }
-        }
-        &:active {
-            letter-spacing: .25em;
-            transition: .25s;
-            transform: scale(.98);
-        }
-        // end of button hover and active state
-
-    }
-    // see all button
-
-    .main-header {
-        h2 {
-            font-size: 2em;
-            text-transform: uppercase;
-            font-family: variables.$font-josefin;
-            font-weight: 400;
+            opacity: 1;
         }
     }
-    // general gallery style
-    figure {
-        position: relative;
+    &:active {
+        letter-spacing: .25em;
         transition: .25s;
-        overflow: hidden;
-        border-radius: 2px;
+        transform: scale(.98);
+    }
+    // end of button hover and active state
+
+}
+
+// GALLERY-ITEM = FIGURE > IMG + FIGCAPTION 
+.gallery-item {
+    position: relative;
+    transition: .25s;
+    overflow: hidden;
+    border-radius: 2px;
+    isolation: isolate;
+    @media (min-width: 820px) {
+        cursor: pointer;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        max-height: 450px;
+        z-index: -1;
+    }
+
+    figcaption {
+        position: absolute;
+        font-family: variables.$font-josefin;
+        font-weight: 500;
+        font-size: 1.5em;
+
+        color: variables.$white;
+        text-transform: uppercase;
+        letter-spacing: .05em;
+        line-height: 1.1;
+
+        width: 40%;
+
+        bottom: 1.5rem;
+        left: .5em;
+        transition: .25s;
+        z-index: 5;
+
+        @media (min-width: 820px) {
+            font-size: 2rem;
+            bottom: 1em;
+            left: 1.5em;
+            width: 70%;
+        }
+    }
+
+    // IMAGE CONTRAST OVERLAY
+    &::before {
+        position: absolute;
+        content: '';
+        inset: 0;
+        border-radius: inherit;
+        z-index: 3;
+        transition: .25s;
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.473) 15% , transparent);
+        // gradient on small screens
+        @media (max-width: 820px) {
+        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.473) 15% , transparent);
+        }
+    }
+    // HOVER OVERLAY GREY BG
+    &::after {
+        position: absolute;
+        content: '';
+        inset: 0;
+        opacity: 0;
+        background: #fffa;
+        transition: .5s;
+        z-index: 3;
+    }
+    // HOVER STATE - img zoom, gray background and black text
+    &:hover {
         img {
-            width: 100%;
-            height: 100%;
+            transition: .5s;
+            transform: scale(1.05);
+            transform-origin: right;
         }
         figcaption {
-            font-family: variables.$font-josefin;
-            position: absolute;
-            color: variables.$white;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: .05em;
-            transition: .25s;
-            line-height: 1.1;
-            z-index: 4;
-            // 'the grid' 
-            span {
-                display: block;
-                font-size: 1em;
-            }
-            // end of 'the grid' 
+            color: variables.$black;
         }
-        // CONTRAST OVERLAY
         &::before {
-            position: absolute;
-            content: '';
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 3;
-            transition: .25s;
-            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.473) 15% , transparent);
-            // gradient on small screens
-            @media (max-width: 768px) {
-            background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.473) 15% , transparent);
-            }
-            // end of gradient on small screens
-        // end of contrast overlay
-
-        }
-        // gray hover overlay
-        &::after {
-            position: absolute;
-            content: '';
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
             opacity: 0;
-            z-index: 3;
-            background: #fffa;
-            transition: .5s;
         }
-        // end of gray hover overlay
-        // hover state - img zoom, gray background and black text
-        &:hover {
-            img {
-                transition: .5s;
-                transform: scale(1.05);
-                transform-origin: right;
-            }
-            figcaption {
-                color: variables.$black;
-            }
-            &::before {
-                opacity: 0;
-            }
-            &::after {
-                opacity: 1;
-            }
-        }
-        // end of hover state
-    }
-    // end of general gallery style
-
-    // desktop media query
-    @media (min-width: 1024px){
-        margin: 20vh 0 5vh;
-
-        .mobile-gallery {display: none;}
-        .main-header {
-            position: absolute;
-            top: 0;
-            left: 0;
-            font-size: 1.5em;
-            
-        }
-        .desktop-gallery {
-            margin: 10vh 0 0;
-            display: grid;
-            gap: 1.5rem;
-            grid-template-columns: repeat(4, 1fr);
-            
-            figure {
-                img {
-                    width: 100%;
-                }
-                figcaption {
-                    font-size: 2rem;
-                    bottom: 1.5em;
-                    left: 1.5em;
-                    max-width: 70%;
-                }
-                
-            }
+        &::after {
+            opacity: 1;
         }
     }
-    // end of desktop media query
-
-    // mobile media query
-    @media (max-width: 1024px){
-        padding: 0 5vw;
-        .desktop-gallery {display: none;}
-        
-        .main-header {
-            position: relative;
-            font-size: 1em;
-            text-align: center;
-            margin: 0 0 5vh 0;
-        }
-        .mobile-gallery {
-            display: grid;
-            gap: 5vh;
-            figure {
-                
-                figcaption {
-                    font-size: 1.5em;
-                    bottom: 1.5rem;
-                    left: .5em;
-                    line-height: 1.1;
-                    width: 40%;
-                    span {
-                        font-size: inherit;
-                    }
-                }
-            }
-        }
-    }
-    // end of mobile media query
 }

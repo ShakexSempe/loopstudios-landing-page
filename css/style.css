@@ -64,7 +64,30 @@
   padding: 5vh 0 0;
   margin: 10vh 0 5vh;
 }
-.gallery button {
+.gallery .gallery-title {
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  margin-bottom: 4rem;
+  font-size: 2em;
+}
+@media (max-width: 820px) {
+  .gallery .gallery-title {
+    text-align: center;
+  }
+}
+.gallery .gallery-grid {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 820px) {
+  .gallery .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.gallery-button {
   display: block;
   margin: 5vh auto 0;
   padding: 0.8rem 1rem;
@@ -73,7 +96,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.3em;
-  width: 50%;
+  width: 200px;
   background-color: transparent;
   border: 1px solid #000;
   border-radius: 2px;
@@ -81,17 +104,16 @@
   transition: 0.25s ease;
 }
 @media (min-width: 1024px) {
-  .gallery button {
+  .gallery-button {
     position: absolute;
     right: 0;
-    top: -5vh;
+    top: -1rem;
     letter-spacing: 0.3em;
     padding: 0.8em 3em;
-    width: 15%;
     cursor: pointer;
   }
 }
-.gallery button::before, .gallery button::after {
+.gallery-button::before, .gallery-button::after {
   position: absolute;
   content: "";
   inset: 0;
@@ -99,153 +121,102 @@
   z-index: -1;
   transition: 0.25s ease;
 }
-.gallery button::before {
+.gallery-button::before {
   background-color: white;
 }
-.gallery button::after {
+.gallery-button::after {
   background-color: black;
   opacity: 0;
 }
-.gallery button:hover {
+.gallery-button:hover {
   color: white;
 }
-.gallery button:hover::after {
+.gallery-button:hover::after {
   opacity: 1;
 }
-.gallery button:active {
+.gallery-button:active {
   letter-spacing: 0.25em;
   transition: 0.25s;
   transform: scale(0.98);
 }
-.gallery .main-header h2 {
-  font-size: 2em;
-  text-transform: uppercase;
-  font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
-}
-.gallery figure {
+
+.gallery-item {
   position: relative;
   transition: 0.25s;
   overflow: hidden;
   border-radius: 2px;
+  isolation: isolate;
 }
-.gallery figure img {
+@media (min-width: 820px) {
+  .gallery-item {
+    cursor: pointer;
+  }
+}
+.gallery-item img {
   width: 100%;
   height: 100%;
+  max-height: 450px;
+  z-index: -1;
 }
-.gallery figure figcaption {
-  font-family: "Josefin Sans", sans-serif;
+.gallery-item figcaption {
   position: absolute;
-  color: white;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: 500;
+  font-size: 1.5em;
+  color: white;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  transition: 0.25s;
   line-height: 1.1;
-  z-index: 4;
+  width: 40%;
+  bottom: 1.5rem;
+  left: 0.5em;
+  transition: 0.25s;
+  z-index: 5;
 }
-.gallery figure figcaption span {
-  display: block;
-  font-size: 1em;
+@media (min-width: 820px) {
+  .gallery-item figcaption {
+    font-size: 2rem;
+    bottom: 1em;
+    left: 1.5em;
+    width: 70%;
+  }
 }
-.gallery figure::before {
+.gallery-item::before {
   position: absolute;
   content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  border-radius: inherit;
   z-index: 3;
   transition: 0.25s;
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.473) 15%, transparent);
 }
-@media (max-width: 768px) {
-  .gallery figure::before {
+@media (max-width: 820px) {
+  .gallery-item::before {
     background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.473) 15%, transparent);
   }
 }
-.gallery figure::after {
+.gallery-item::after {
   position: absolute;
   content: "";
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   opacity: 0;
-  z-index: 3;
   background: #fffa;
   transition: 0.5s;
+  z-index: 3;
 }
-.gallery figure:hover img {
+.gallery-item:hover img {
   transition: 0.5s;
   transform: scale(1.05);
   transform-origin: right;
 }
-.gallery figure:hover figcaption {
+.gallery-item:hover figcaption {
   color: black;
 }
-.gallery figure:hover::before {
+.gallery-item:hover::before {
   opacity: 0;
 }
-.gallery figure:hover::after {
+.gallery-item:hover::after {
   opacity: 1;
-}
-@media (min-width: 1024px) {
-  .gallery {
-    margin: 20vh 0 5vh;
-  }
-  .gallery .mobile-gallery {
-    display: none;
-  }
-  .gallery .main-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 1.5em;
-  }
-  .gallery .desktop-gallery {
-    margin: 10vh 0 0;
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .gallery .desktop-gallery figure img {
-    width: 100%;
-  }
-  .gallery .desktop-gallery figure figcaption {
-    font-size: 2rem;
-    bottom: 1.5em;
-    left: 1.5em;
-    max-width: 70%;
-  }
-}
-@media (max-width: 1024px) {
-  .gallery {
-    padding: 0 5vw;
-  }
-  .gallery .desktop-gallery {
-    display: none;
-  }
-  .gallery .main-header {
-    position: relative;
-    font-size: 1em;
-    text-align: center;
-    margin: 0 0 5vh 0;
-  }
-  .gallery .mobile-gallery {
-    display: grid;
-    gap: 5vh;
-  }
-  .gallery .mobile-gallery figure figcaption {
-    font-size: 1.5em;
-    bottom: 1.5rem;
-    left: 0.5em;
-    line-height: 1.1;
-    width: 40%;
-  }
-  .gallery .mobile-gallery figure figcaption span {
-    font-size: inherit;
-  }
 }
 
 #header {

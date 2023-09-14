@@ -12,14 +12,6 @@ hamburger.addEventListener("click", () => {
     navList.classList.toggle('active');
 });
 
-// remove nav-list when item selected
-// 
-
-
-//   
-//   
-
-
 // gallery
 const desktop = document.querySelector('.desktop-gallery');
 const mobile = document.querySelector('.mobile-gallery');
@@ -77,35 +69,35 @@ const work = [
 ];
 
 // window event lister : display desktop gallery
-window.addEventListener('DOMContentLoaded' , () => {
-    desktopGallery(work);
-    mobileGallery(work);
-});
+// window.addEventListener('DOMContentLoaded' , () => {
+//     desktopGallery(work);
+//     mobileGallery(work);
+// });
 
 // desktopGallery 
-desktopGallery = (workItems) => {
-    let displayItem = workItems.map(item => {
-        return `<figure>
-            <img src=${item.desktop} alt="img">
-            <figcaption>${item.title}</figcaption>
-        </figure>`
-    });
-    displayItem = displayItem.join("");
-    desktop.innerHTML = displayItem;
+// desktopGallery = (workItems) => {
+//     let displayItem = workItems.map(item => {
+//         return `<figure>
+//             <img src=${item.desktop} alt="img">
+//             <figcaption>${item.title}</figcaption>
+//         </figure>`
+//     });
+//     displayItem = displayItem.join("");
+//     desktop.innerHTML = displayItem;
 
-}
+// }
 
 // mobileGallery
-mobileGallery = (workItems) => {
-    let displayItem = workItems.map(item => {
-        return `<figure>
-            <img src=${item.mobile} alt="img">
-            <figcaption>${item.title}</figcaption>
-        </figure>`
-    });
-    displayItem = displayItem.join("");
-    mobile.innerHTML = displayItem;
-}
+// mobileGallery = (workItems) => {
+//     let displayItem = workItems.map(item => {
+//         return `<figure>
+//             <img src=${item.mobile} alt="img">
+//             <figcaption>${item.title}</figcaption>
+//         </figure>`
+//     });
+//     displayItem = displayItem.join("");
+//     mobile.innerHTML = displayItem;
+// }
 
 
 // transparent navbar
