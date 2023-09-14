@@ -109,16 +109,24 @@ mobileGallery = (workItems) => {
 
 
 // transparent navbar
+const main = document.getElementById('main');
+const header = document.querySelector('.navbar')
+const mainOptions = {
+    rootMargin:'0px 0px 0px 0px',
+};
 
+const mainObserver = new IntersectionObserver(
+    function(entries, mainObserver){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting){
+                console.log('Item IS io');
+                header.classList.remove('active-header');
+            } else {
+                console.log('item NOT io');
+                header.classList.add('active-header');
+            }
+        })
+    }, mainOptions
+);
 
-// document.addEventListener('scroll', () => {
-//     const navbar = document.querySelector('#header .navbar');
-//     const scroll_position = window.scrollY;
-
-
-// if(scroll_position > 25) {
-//     navbar.getElementsByClassName.backgroundColor = "0000ff";
-// } else {
-//     header.style.backgroundColor = "transparent"
-// }
-// });
+mainObserver.observe(main);

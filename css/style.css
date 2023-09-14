@@ -273,7 +273,22 @@
 }
 @media (max-width: 1024px) {
   #header .navbar {
-    padding: 5vh 5vw;
+    padding: 0.25rem 5vw;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    transition: 0.25s;
+  }
+  #header .navbar::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: transparent;
+    transition: 0.25s;
+  }
+  #header .navbar.active-header::after {
+    background-color: #000;
   }
 }
 #header .navbar .logo {
@@ -311,7 +326,7 @@
 }
 #header .navbar .mobile-nav .mobile-nav-list li a {
   font-family: "Josefin Sans", sans-serif;
-  color: #fffa;
+  color: white;
   font-size: 1.5em;
   font-weight: 500;
   letter-spacing: 0.1em;
