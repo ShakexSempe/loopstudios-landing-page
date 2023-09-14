@@ -1,0 +1,255 @@
+@use './variables';
+
+// FOOTER 
+#footer {
+    grid-area: footer;
+    background-color: variables.$black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    font-family: variables.$font-josefin;
+    text-transform: capitalize;
+
+    // mobile
+    @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: variables.$gray;
+        padding: 5vh;
+        .footer-logo {
+            margin: 1.5em auto;
+        }
+        &#footer .brand-links {
+            margin: .5em auto;
+            text-align: center;
+            color: variables.$white;
+
+            li {
+                margin-bottom: 1.5em;
+                list-style: none;
+
+                p {
+                    position: relative;
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        bottom: -.2em;
+                        left: 50%;
+                        transform: translateX(-50%) translateY(1em);
+                        width: 10%;
+                        height: 3px;
+                        opacity: 0;
+                        background-color: variables.$white-trans;
+                        transition: .3s;
+                    }
+                }
+
+                &:hover {
+                    transition: .2s;
+                    transform: scale(1.18);
+
+                    p {
+                        &::after {
+                            opacity: 1;
+                            transform: translateX(-50%) translateY(0);
+                        }
+                    }
+                }
+                // brand links hover state
+
+            }
+        }
+        .social-links {
+
+            ul {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                margin: 1em auto 1.5em;
+                // footer social icons
+                li {
+                    list-style: none;
+                    position: relative;
+                    
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 3px;
+                        bottom: -.3em;
+                        opacity: 0;
+                        background-color: variables.$white-trans;
+                        transform: translateY(1em);
+                        transition: .2s;
+                    }
+                    
+                    // footer social icon hover state
+                    &:hover {
+                        transition: .3s;
+                        transform: scale(1.3);
+                        &::before {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                    // end of footer social icon hover state
+                }
+                // end of footer social icons
+
+            }
+
+            p {
+                text-align: center;
+                margin-bottom: .3em;
+                a {
+                    color: variables.$white;
+                    text-decoration: none;
+                    position: relative;
+
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%) translateY(.5em);
+                        width: 50%;
+                        height: 2px;
+                        background-color:variables.$white-trans;
+                        transition: .3s;
+                        opacity: 0;
+
+                    }
+                    &:hover {
+                        &::before {
+                            opacity: 1;
+                        transform: translateY(0) translateX(-50%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // end of mobile
+
+    // desktop footer
+    @media (min-width: 1024px){
+        color: variables.$white;
+        padding: 2vh 10vw;
+        .footer-logo {
+            margin-bottom: 1em;
+        }
+        .brand-links {
+            display: grid;
+            ul {
+                display: flex;
+                justify-content: space-between;
+                margin: .5em auto;
+
+                li {
+                    list-style: none;
+                    margin: .5em 4em .5em 0;
+                    cursor: pointer;
+                    position: relative;
+                    // links underline and hover
+                    &::before {
+                        content:'';
+                        position: absolute;
+                        bottom: -.5em;
+                        width: 50%;
+                        left: 50%;
+                        transform: translateX(-50%) translateY(.5em);
+                        height: 2px;
+                        background-color: variables.$white;
+                        transition: .5s ease;
+                        opacity: 0;
+                    }
+                    &:hover {
+                        transition: .5s;
+                        transform: scale(1.15);
+                        &::before {
+                            opacity: 1;
+                            transform: translateX(-50%) translateY(-100%);
+                        }
+                    }
+                    // end of links underline and hover
+                }
+            }
+        }
+        // desktop social links
+        .social-links {
+            display: grid;
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                margin-bottom: 1em;
+
+                li {
+                    list-style:none;
+                    margin: 1em 0 1em 1em;
+                    position: relative;
+                    cursor: pointer;
+                    // links underline and hover
+                    &::before {
+                        content:'';
+                        position: absolute;
+                        bottom: -.2em;
+                        width: 100%;
+                        left: 50%;
+                        transform: translateX(-50%) translateY(.5em);
+                        height: 2px;
+                        background-color: variables.$white;
+                        transition: .5s ease;
+                        opacity: 0;
+                    }
+                    &:hover {
+                        transition: .5s;
+                        transform: scale(1.2);
+                        &::before {
+                            opacity: 1;
+                            transform: translateX(-50%) translateY(-100%);
+                        }
+                    }
+                    // end of links underline and hover
+                }
+            }
+            
+            p {
+                display: flex;
+                justify-content: flex-end;
+                color: variables.$gray;
+                line-height: 1.2;
+                margin-bottom: .3em;
+
+                a {
+                    color: variables.$white;
+                    text-decoration: none;
+                    position: relative;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        transform: translateX(-50%) translateY(.5em);
+                        width: 50%;
+                        height: 1px;
+                        background-color: variables.$white;
+                        transition: .5s ease;
+                        opacity: 0;
+                    }
+                    &:hover {
+                        &::before {
+                            opacity: 1;
+                            transform: translateX(-50%) translateY(0);
+                        }
+                    }
+                }
+            }
+        }
+        // end of desktop social links
+    }
+    // end of desktop footer
+}
