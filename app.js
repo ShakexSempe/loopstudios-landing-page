@@ -1,18 +1,17 @@
 
 
-// hamburger menu toggle
-// select hamburger icon and navlist to be displayed
+// HAMBURGER TOGGLE 
 const hamburger = document.querySelector('.hamburger');
 const navList = document.querySelector('#header .navbar .mobile-nav');
 const navItem = document.querySelectorAll('#header .navbar .mobile-list li a');
 console.log(navItem);
-// add event lister to toggle active class on hamburger on click
+// EVENT LISTENER - TOGGLE ACTIVE CLASS ON CLICK 
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle('active');
     navList.classList.toggle('active');
 });
 
-// gallery
+// DYNAMIC GALLERY 
 const desktop = document.querySelector('.desktop-gallery');
 const mobile = document.querySelector('.mobile-gallery');
 
