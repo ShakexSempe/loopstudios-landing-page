@@ -5,6 +5,7 @@
     position: relative;
     padding: 5vh 5vw 0;
     margin: 10vh 0 5vh;
+
     @media (min-width: 820px) {
         padding: 5vh 0;
     }
@@ -16,6 +17,7 @@
         margin-bottom: 10vh;
         font-size: 2em;
         font-size: clamp(2em, 4vw, 3em);
+
         // MOBILE GALLERY TITLE 
         @media (max-width: 820px) {
             margin-bottom: 2rem;
@@ -26,67 +28,13 @@
     .gallery-grid {
         display: grid;
         gap: 1rem;
+
         // DESKTOP GALLERY GRID 4 COLUMNS
-        @media (min-width: 820px){
+        @media (min-width: 820px) {
             grid-template-columns: repeat(4, 1fr);
             gap: 1.5rem;
         }
     }
-
-}
-// 'SEE ALL' BUTTON
-.gallery-button {
-    display: block;
-    margin: 5vh auto 0;
-    padding: .8rem 1rem;
-    position: relative;
-    font-family: variables.$font-alata;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: .3em;
-    width: 200px;
-    background-color: transparent;
-    border: 1px solid #000;
-    border-radius: 2px;
-    z-index: 1;
-    transition: .25s ease;
-
-    @media (min-width: 1024px) {
-        position: absolute;
-        right: 0;
-        top: 0;
-        letter-spacing: .3em;
-        padding: .8em 3em;
-        cursor: pointer;
-    }
-    // button hover and active state
-    &::before, &::after {
-        position: absolute;
-        content: '';
-        inset: 0;
-        border-radius: 2px;
-        z-index: -1;
-        transition: .25s ease;
-    }
-    &::before {
-        background-color: variables.$white; 
-    }
-    &::after {
-        background-color: variables.$black;
-        opacity: 0;
-    }
-    &:hover {
-        color: variables.$white;
-        &::after {
-            opacity: 1;
-        }
-    }
-    &:active {
-        letter-spacing: .25em;
-        transition: .25s;
-        transform: scale(.98);
-    }
-    // end of button hover and active state
 
 }
 
@@ -97,6 +45,7 @@
     overflow: hidden;
     border-radius: 2px;
     isolation: isolate;
+    // DESKTOP = CURSOR POINER
     @media (min-width: 820px) {
         cursor: pointer;
     }
@@ -142,12 +91,14 @@
         border-radius: inherit;
         z-index: 3;
         transition: .25s;
-        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.473) 15% , transparent);
+        background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.473) 15%, transparent);
+
         // gradient on small screens
         @media (max-width: 820px) {
-        background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.473) 15% , transparent);
+            background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.473) 15%, transparent);
         }
     }
+
     // HOVER OVERLAY GREY BG
     &::after {
         position: absolute;
@@ -158,6 +109,7 @@
         transition: .5s;
         z-index: 3;
     }
+
     // HOVER STATE - img zoom, gray background and black text
     &:hover {
         img {
@@ -165,14 +117,79 @@
             transform: scale(1.05);
             transform-origin: right;
         }
+
         figcaption {
             color: variables.$black;
         }
+
         &::before {
             opacity: 0;
         }
+
         &::after {
             opacity: 1;
         }
     }
+}
+
+// 'SEE ALL' BUTTON
+.gallery-button {
+    display: block;
+    margin: 5vh auto 0;
+    padding: .8rem 1rem;
+    position: relative;
+    font-family: variables.$font-alata;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    width: 200px;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 2px;
+    z-index: 1;
+    transition: .25s ease;
+
+    @media (min-width: 1024px) {
+        position: absolute;
+        right: 0;
+        top: 0;
+        letter-spacing: .3em;
+        padding: .8em 3em;
+        cursor: pointer;
+    }
+
+    // button hover and active state
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        inset: 0;
+        border-radius: 2px;
+        z-index: -1;
+        transition: .25s ease;
+    }
+
+    &::before {
+        background-color: variables.$white;
+    }
+
+    &::after {
+        background-color: variables.$black;
+        opacity: 0;
+    }
+
+    &:hover {
+        color: variables.$white;
+
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &:active {
+        letter-spacing: .25em;
+        transition: .25s;
+        transform: scale(.98);
+    }
+
 }

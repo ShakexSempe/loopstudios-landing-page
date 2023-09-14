@@ -94,59 +94,6 @@
   }
 }
 
-.gallery-button {
-  display: block;
-  margin: 5vh auto 0;
-  padding: 0.8rem 1rem;
-  position: relative;
-  font-family: "Alata", sans-serif;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.3em;
-  width: 200px;
-  background-color: transparent;
-  border: 1px solid #000;
-  border-radius: 2px;
-  z-index: 1;
-  transition: 0.25s ease;
-}
-@media (min-width: 1024px) {
-  .gallery-button {
-    position: absolute;
-    right: 0;
-    top: 0;
-    letter-spacing: 0.3em;
-    padding: 0.8em 3em;
-    cursor: pointer;
-  }
-}
-.gallery-button::before, .gallery-button::after {
-  position: absolute;
-  content: "";
-  inset: 0;
-  border-radius: 2px;
-  z-index: -1;
-  transition: 0.25s ease;
-}
-.gallery-button::before {
-  background-color: white;
-}
-.gallery-button::after {
-  background-color: black;
-  opacity: 0;
-}
-.gallery-button:hover {
-  color: white;
-}
-.gallery-button:hover::after {
-  opacity: 1;
-}
-.gallery-button:active {
-  letter-spacing: 0.25em;
-  transition: 0.25s;
-  transform: scale(0.98);
-}
-
 .gallery-item {
   position: relative;
   transition: 0.25s;
@@ -224,6 +171,59 @@
 }
 .gallery-item:hover::after {
   opacity: 1;
+}
+
+.gallery-button {
+  display: block;
+  margin: 5vh auto 0;
+  padding: 0.8rem 1rem;
+  position: relative;
+  font-family: "Alata", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  width: 200px;
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 2px;
+  z-index: 1;
+  transition: 0.25s ease;
+}
+@media (min-width: 1024px) {
+  .gallery-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    letter-spacing: 0.3em;
+    padding: 0.8em 3em;
+    cursor: pointer;
+  }
+}
+.gallery-button::before, .gallery-button::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  border-radius: 2px;
+  z-index: -1;
+  transition: 0.25s ease;
+}
+.gallery-button::before {
+  background-color: white;
+}
+.gallery-button::after {
+  background-color: black;
+  opacity: 0;
+}
+.gallery-button:hover {
+  color: white;
+}
+.gallery-button:hover::after {
+  opacity: 1;
+}
+.gallery-button:active {
+  letter-spacing: 0.25em;
+  transition: 0.25s;
+  transform: scale(0.98);
 }
 
 #header {
