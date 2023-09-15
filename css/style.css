@@ -383,6 +383,7 @@ img {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 500;
   font-size: 1.5em;
+  font-size: clamp(1.5rem, 2vw, 2rem);
   color: white;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -395,7 +396,6 @@ img {
 }
 @media (min-width: 820px) {
   .gallery-item figcaption {
-    font-size: 2rem;
     bottom: 1em;
     left: 1.5em;
     width: 70%;
