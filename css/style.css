@@ -711,8 +711,8 @@ img {
   padding: 1rem;
   border-radius: 2px;
   position: relative;
-  top: 20vh;
-  margin: 1.5em 5vw;
+  top: 30vh;
+  margin: 1.5em 5vw 0;
   padding: 1.5rem 2rem;
 }
 #header .title h1 {
