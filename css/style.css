@@ -12,6 +12,7 @@
 #about img {
   height: 100%;
   margin: 0 auto 2rem;
+  border-radius: 3px;
 }
 @media (min-width: 1024px) {
   #about img {
@@ -32,6 +33,7 @@
     width: 49%;
     height: 65%;
     bottom: 0;
+    border-top-left-radius: 3px;
     background-color: white;
     text-align: left;
     padding: 0 6rem;
@@ -364,7 +366,7 @@ img {
   position: relative;
   transition: 0.25s;
   overflow: hidden;
-  border-radius: 2px;
+  border-radius: 3px;
   isolation: isolate;
 }
 @media (min-width: 820px) {
@@ -451,7 +453,7 @@ img {
   width: 200px;
   background-color: transparent;
   border: 1px solid #000;
-  border-radius: 2px;
+  border-radius: 3px;
   z-index: 1;
   transition: 0.25s ease;
 }
@@ -469,15 +471,17 @@ img {
   position: absolute;
   content: "";
   inset: 0;
-  border-radius: 2px;
+  border-radius: inherit;
   z-index: -1;
   transition: 0.25s ease;
 }
 .gallery-button::before {
   background-color: white;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.05);
 }
 .gallery-button::after {
   background-color: black;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.15);
   opacity: 0;
 }
 .gallery-button:hover {
@@ -709,7 +713,7 @@ img {
 #header .title {
   border: 1px solid #fff;
   padding: 1rem;
-  border-radius: 2px;
+  border-radius: 3px;
   position: relative;
   top: 30vh;
   margin: 1.5em 5vw 0;
