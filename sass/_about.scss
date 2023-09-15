@@ -3,6 +3,7 @@
 #about {
     position: relative;
     margin: 0 5vw 10vh;
+    max-width: calc(1440px - 20%);
     // DESKTOP ABOUT SECTION
     @media (min-width: 1024px) {
         margin-inline: auto;
