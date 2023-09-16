@@ -87,7 +87,7 @@ img {
   width: 100%;
   display: grid;
   gap: 10vh;
-  grid-template-rows: 80vh auto auto;
+  grid-template-rows: 75vh auto auto;
   grid-template-columns: 5vw auto 5vw;
   grid-template-areas: "header header header" ". main ." "footer footer footer";
 }
@@ -332,7 +332,7 @@ img {
   padding: 5vh 5vw 0;
   margin: 10vh 0 5vh;
 }
-@media (min-width: 820px) {
+@media (min-width: 1044px) {
   .gallery {
     padding: 5vh 0;
   }
@@ -444,13 +444,13 @@ img {
 .gallery-button {
   display: block;
   margin: 5vh auto 0;
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 0.5rem;
   position: relative;
   font-family: "Alata", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.3em;
-  width: 200px;
+  width: 160px;
   background-color: transparent;
   border: none;
   border-radius: 3px;
@@ -460,7 +460,7 @@ img {
 @media (min-width: 1024px) {
   .gallery-button {
     position: absolute;
-    right: 0;
+    right: 0vw;
     top: 0;
     letter-spacing: 0.3em;
     padding: 0.8em 3em;
