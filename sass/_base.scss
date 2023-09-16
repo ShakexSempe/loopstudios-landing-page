@@ -23,7 +23,7 @@ img {
     width: 100%;
     // DESKTOP GRID LAYOUT 
     display: grid;
-    gap: 10vh;
+    row-gap: 10vh;
     grid-template-rows: 75vh auto auto;
     grid-template-columns: 5vw auto 5vw;
     grid-template-areas: "header header header"
@@ -32,7 +32,7 @@ img {
 
     // MOBILE GRID LAYOUT
     @media (max-width: 1024px) {
-        gap: 5vh;
+        row-gap: 5vh;
         grid-template-rows: 95vh auto auto;
         grid-template-columns: 100%;
         grid-template-areas: "header"

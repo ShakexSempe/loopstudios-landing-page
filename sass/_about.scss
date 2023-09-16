@@ -2,11 +2,12 @@
 
 #about {
     position: relative;
-    margin: 0 5vw 10vh;
+    margin: 0vh 5vw 10vh;
     max-width: calc(1440px - 20%);
     // DESKTOP ABOUT SECTION
     @media (min-width: 1024px) {
-        margin-inline: auto;
+        // margin-inline: auto;
+        // margin: 0 5vw;
     }
 
     // IMAGE - SMALL SCREENS = MARGIN BOTTOM AND INLINE AUTO
@@ -29,13 +30,13 @@
         @media (min-width: 1024px) {
             position: absolute;
             right: 0;
-            width: 49%;
-            height: 65%;
+            width: 50%;
+            height: 60%;
             bottom: 0;
             border-top-left-radius: 3px;
             background-color: variables.$white;
             text-align: left;
-            padding: 0 6rem;
+            padding: 0 8.5rem;
             margin: 0;
         }
 
@@ -43,8 +44,8 @@
             font-family: variables.$font-josefin;
             text-transform: uppercase;
             font-size: 2rem;
-            font-size: clamp(2rem, 3vw, 2.5rem);
-            font-weight: 400;
+            font-size: clamp(2rem, 3vw, 2.8rem);
+            font-weight: 500;
             letter-spacing: .05em;
             line-height: 1.1;
             margin-bottom: 1rem;
