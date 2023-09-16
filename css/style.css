@@ -507,7 +507,7 @@ img {
   height: 100%;
   width: 100%;
   z-index: -1;
-  background: #0004;
+  background: #0005;
 }
 #header .hero-image img {
   width: 100%;
@@ -714,7 +714,7 @@ img {
   transform: scale(0.5);
 }
 #header .title {
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   padding: 1rem;
   border-radius: 3px;
   position: relative;
