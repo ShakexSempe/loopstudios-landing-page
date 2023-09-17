@@ -7,20 +7,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
     font-family: variables.$font-josefin;
     text-transform: capitalize;
 
-    // mobile
+    // MOBILE FOOTER STYLE
     @media (max-width: 768px) {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         color: variables.$gray;
-        padding: 5vh;
+        padding: 2rem 5vw;
         .footer-logo {
-            margin: 1.5em auto;
+            margin: 2em auto;
         }
+
         &#footer .brand-links {
             margin: .5em auto;
             text-align: center;
@@ -61,6 +61,7 @@
 
             }
         }
+
         .social-links {
 
             ul {
@@ -131,25 +132,24 @@
             }
         }
     }
-    // end of mobile
 
-    // desktop footer
+    // DESKTOP FOOTER STYLE
     @media (min-width: 1024px){
         color: variables.$white;
-        padding: 2vh 10vw;
+        padding: 5vh 10vw;
         .footer-logo {
-            margin-bottom: 1em;
+            margin-bottom: 2rem;
         }
         .brand-links {
             display: grid;
             ul {
                 display: flex;
                 justify-content: space-between;
-                margin: .5em auto;
+                gap: 2rem;
+                margin: 0 auto;
 
                 li {
                     list-style: none;
-                    margin: .5em 4em .5em 0;
                     cursor: pointer;
                     position: relative;
                     // links underline and hover
@@ -184,11 +184,12 @@
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
-                margin-bottom: 1em;
+                gap: 1rem;
+                margin: .45rem 0 2rem;
 
                 li {
                     list-style:none;
-                    margin: 1em 0 1em 1em;
+                    // margin: 1em 0 1em 1em;
                     position: relative;
                     cursor: pointer;
                     // links underline and hover
