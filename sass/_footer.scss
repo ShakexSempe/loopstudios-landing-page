@@ -133,73 +133,52 @@
         }
     }
 
+    // PAGE/BRAND LINKS
+    .brand-links {
+        margin: 1em auto;
+        text-align: center;
+        color: variables.$white;
 
-    // MOBILE FOOTER STYLE
-    @media (max-width: 820px) {
-        
-        
+        // DESKTOP .BRAND STYLE
+        @media (min-width: 820px) {
+            margin: 0;
+        }
 
-        &#footer .brand-links {
-            margin: .5em auto;
-            text-align: center;
-            color: variables.$white;
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
 
-            li {
-                margin-bottom: 1.5em;
-                list-style: none;
-
-                p {
-                    position: relative;
-                    &::after {
-                        position: absolute;
-                        content: '';
-                        bottom: -.25em;
-                        left: 50%;
-                        transform: translateX(-50%) translateY(1em);
-                        width: 10%;
-                        height: 2px;
-                        opacity: 0;
-                        background-color: variables.$white-trans;
-                        transition: .3s;
-                    }
-                }
-
-                &:hover {
-                    transition: .2s;
-                    transform: scale(1.18);
-
-                    p {
-                        &::after {
-                            opacity: 1;
-                            transform: translateX(-50%) translateY(0);
-                        }
-                    }
-                }
-                // brand links hover state
-
+            // DESKTOP UL STYLE
+            @media (min-width: 820px) {
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 2rem;
             }
         }
 
-        
-    }
+        li {
+            list-style: none;
 
-    // DESKTOP FOOTER STYLE
-    @media (min-width: 820px){
-        
-        .brand-links {
-            display: grid;
-            ul {
-                display: flex;
-                justify-content: space-between;
-                gap: 2rem;
-                margin: 0 auto;
-
-                li {
-                    list-style: none;
+            p {
+                position: relative;
+                // DESKTOP LI P CURSOR
+                @media (min-width: 820px){
                     cursor: pointer;
-                    position: relative;
-                    // links underline and hover
-                    &::before {
+                }
+                // LINK P UNDERLINE
+                &::after {
+                    position: absolute;
+                    content: '';
+                    bottom: -.25em;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(1em);
+                    width: 10%;
+                    height: 2px;
+                    opacity: 0;
+                    background-color: variables.$white-trans;
+                    transition: .3s;
+                    @media (min-width: 820px){
                         content:'';
                         position: absolute;
                         bottom: -.5em;
@@ -211,18 +190,24 @@
                         transition: .5s ease;
                         opacity: 0;
                     }
-                    &:hover {
-                        transition: .5s;
-                        transform: scale(1.15);
-                        &::before {
-                            opacity: 1;
-                            transform: translateX(-50%) translateY(-100%);
-                        }
-                    }
-                    // end of links underline and hover
                 }
             }
+
+            // LI ITEM HOVER = P UNDERLINE TRANSITION
+            &:hover {
+                transition: .2s;
+                transform: scale(1.18);
+
+                p {
+                    &::after {
+                        opacity: 1;
+                        transform: translateX(-50%) translateY(0);
+                    }
+                }
+            }
+            // brand links hover state
+
         }
     }
-    // end of desktop footer
+
 }
