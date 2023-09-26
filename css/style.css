@@ -4,6 +4,11 @@
   margin: 0vh 5vw 10vh;
   max-width: calc(1440px - 20%);
 }
+@media (min-width: 1024px) {
+  #about {
+    margin: 5vh 5vw 10vh;
+  }
+}
 #about img {
   height: 100%;
   margin: 0 auto 2rem;
